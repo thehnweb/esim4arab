@@ -1,0 +1,2595 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+  <meta charset='UTF-8'/>
+  <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+  <title>eSIM4Arab | بطاقات eSIM عالمية فورية</title>
+  <meta content='اطلب بطاقات eSIM فورية للسفر حول العالم بأسعار تنافسية مع تتبع استهلاك eSIM مباشرة.' name='description'/>
+  <script src='https://cdn.tailwindcss.com'/>
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' rel='stylesheet'/>
+  <b:skin><![CDATA[
+
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;700&amp;display=swap');
+        
+        :root {
+            --primary: #0f172a;
+        }
+        
+        body {
+            font-family: 'Noto Sans Arabic', system-ui, -apple-system, sans-serif;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            right: 0;
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(to left, #3b82f6, #60a5fa);
+            border-radius: 3px;
+        }
+        
+        .destination-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .destination-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        
+        .nav-active {
+            color: #3b82f6;
+            font-weight: 700;
+        }
+        
+        .step-number {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        
+        .esim-modal {
+            animation: modalPop 0.3s ease forwards;
+        }
+        
+        @keyframes modalPop {
+            from {
+                opacity: 0;
+                transform: scale(0.95) translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+        
+        .flag {
+            font-size: 2.5rem;
+            line-height: 1;
+        }
+        
+        .price-tag {
+            background: linear-gradient(90deg, #3b82f6, #2563eb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+        
+        .trust-badge {
+            transition: transform 0.2s ease;
+        }
+        
+        .trust-badge:hover {
+            transform: scale(1.05);
+        }
+        
+        .faq-question {
+            transition: all 0.3s ease;
+        }
+        
+        .nav-scrolled {
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            background: rgba(255,255,255,0.98);
+            backdrop-filter: blur(12px);
+        }
+        
+        .modern-shadow {
+            box-shadow: 0 10px 15px -3px rgb(15 23 42 / 0.1), 
+                       0 4px 6px -4px rgb(15 23 42 / 0.1);
+        }
+    
+
+
+.esim-wrap{
+  min-height:auto;
+  padding:0;
+  background:transparent;
+  font-family:'Noto Sans Arabic',system-ui,-apple-system,sans-serif;
+}
+.esim-card{
+  width:100%;
+  max-width:860px;
+  margin:0 auto;
+  background:rgba(255,255,255,.96);
+  border:1px solid rgba(226,232,240,.95);
+  border-radius:30px;
+  padding:32px;
+  box-shadow:0 25px 70px rgba(15,23,42,.12);
+  text-align:center;
+}
+.esim-icon{
+  width:62px;
+  height:62px;
+  margin:0 auto 14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:20px;
+  background:#e0f2fe;
+  font-size:30px;
+}
+.esim-badge{
+  display:inline-block;
+  padding:8px 15px;
+  border-radius:999px;
+  background:#ecfeff;
+  color:#0369a1;
+  font-size:13px;
+  font-weight:800;
+}
+.esim-subtitle{
+  margin:0 auto 24px;
+  max-width:560px;
+  color:#64748b;
+  font-size:16px;
+  line-height:1.7;
+}
+.esim-form{
+  display:flex;
+  gap:12px;
+  padding:8px;
+  background:#f8fafc;
+  border:1px solid #e2e8f0;
+  border-radius:20px;
+}
+#esimId{
+  flex:1;
+  border:0;
+  background:transparent;
+  padding:16px;
+  font-size:16px;
+  outline:none;
+  color:#0f172a;
+  direction:ltr;
+  text-align:center;
+}
+.esim-form button{
+  border:0;
+  border-radius:15px;
+  padding:16px 24px;
+  background:linear-gradient(135deg,#0284c7,#2563eb);
+  color:#fff;
+  font-weight:900;
+  cursor:pointer;
+  white-space:nowrap;
+}
+.loading,.error{
+  margin-top:22px;
+  padding:16px;
+  border-radius:18px;
+  font-weight:800;
+}
+.loading{background:#eff6ff;color:#1d4ed8}
+.error{background:#fee2e2;color:#b91c1c}
+.result-panel{
+  margin-top:28px;
+  text-align:right;
+  background:#f8fafc;
+  border:1px solid #e2e8f0;
+  border-radius:26px;
+  padding:24px;
+}
+.result-head{
+  display:flex;
+  justify-content:space-between;
+  gap:14px;
+  align-items:flex-start;
+  margin-bottom:20px;
+}
+.package-title{
+  font-size:19px;
+  line-height:1.4;
+  color:#0f172a;
+  font-weight:900;
+}
+.status-pill{
+  padding:8px 13px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:900;
+}
+.status-active{background:#dcfce7;color:#15803d}
+.status-expired{background:#fee2e2;color:#b91c1c}
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+.stat,.info-box{
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:20px;
+  padding:18px;
+}
+.stat-label,.info-label{
+  color:#64748b;
+  font-size:13px;
+  font-weight:700;
+  margin-bottom:8px;
+}
+.stat-value{
+  color:#0f172a;
+  font-size:22px;
+  font-weight:900;
+  direction:ltr;
+  text-align:right;
+}
+.progress-area{
+  margin:22px 0;
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:20px;
+  padding:18px;
+}
+.progress-top{
+  display:flex;
+  justify-content:space-between;
+  color:#475569;
+  font-size:14px;
+  font-weight:800;
+  margin-bottom:10px;
+}
+.progress-bg{
+  height:18px;
+  background:#e2e8f0;
+  border-radius:999px;
+  overflow:hidden;
+}
+.progress-bar{
+  height:100%;
+  background:linear-gradient(90deg,#22c55e,#0ea5e9);
+  border-radius:999px;
+}
+.info-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+}
+.info-value{
+  color:#0f172a;
+  font-size:15px;
+  font-weight:850;
+  word-break:break-word;
+  direction:ltr;
+  text-align:right;
+}
+.small-note{
+  margin-top:18px;
+  color:#64748b;
+  font-size:13px;
+  line-height:1.6;
+  text-align:center;
+}
+@media(max-width:700px){
+  .esim-card{padding:24px 16px;border-radius:24px}
+  .esim-form{flex-direction:column}
+  .esim-form button{width:100%}
+  .stats-grid,.info-grid{grid-template-columns:1fr}
+  .result-head{flex-direction:column}
+}
+
+  ]]></b:skin>
+</head>
+<body>
+  <b:section class='main' id='main' showaddelement='yes'>
+    <b:widget id='HTML1' locked='true' title='' type='HTML' version='2' visible='true'>
+      <b:widget-settings>
+        <b:widget-setting name='content'><![CDATA[<!-- NAVBAR -->
+    <nav id="navbar" class="bg-white border-b border-slate-200 sticky top-0 z-50 transition-all duration-300">
+        <div class="max-w-screen-xl mx-auto">
+            <div class="px-6 py-4 flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center gap-x-3">
+                    <div class="w-11 h-11 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg">
+                        <i class="fas fa-globe text-white text-3xl"></i>
+                    </div>
+                    <div>
+                        <span class="font-extrabold text-3xl tracking-tighter">eSIM</span>
+                        <span class="font-bold text-3xl text-blue-600">َ4Arab</span>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="#destinations" class="hover:text-blue-600 transition-colors">الباقات</a>
+                    <a href="#how" class="hover:text-blue-600 transition-colors">كيفية الاستخدام</a>
+                    <a href="#why" class="hover:text-blue-600 transition-colors">لماذا نحن</a>
+                    <a href="#faq" class="hover:text-blue-600 transition-colors">الأسئلة الشائعة</a>
+                </div>
+                
+                <div class="flex items-center gap-x-4">
+                    <!-- WhatsApp Button -->
+                    <a href="https://wa.me/212760767265?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D8%A8%D8%B7%D8%A7%D9%82%D8%A9%20eSIM" 
+                       target="_blank"
+                       class="hidden sm:flex items-center gap-x-2 px-5 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-semibold rounded-3xl transition-all active:scale-95">
+                        <i class="fab fa-whatsapp text-lg"></i>
+                        <span>واتساب</span>
+                    </a>
+                    
+                    <!-- Mobile Menu -->
+                    <button id="mobile-menu-btn"
+                            class="md:hidden w-11 h-11 flex items-center justify-center text-slate-600 hover:text-slate-900">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t px-6 py-4">
+            <div class="flex flex-col gap-y-3 text-sm font-medium">
+                <a href="#destinations" class="py-2 px-3 hover:bg-slate-100 rounded-2xl">الباقات</a>
+                <a href="#how" class="py-2 px-3 hover:bg-slate-100 rounded-2xl">كيفية الاستخدام</a>
+                <a href="#why" class="py-2 px-3 hover:bg-slate-100 rounded-2xl">لماذا نحن</a>
+                <a href="#faq" class="py-2 px-3 hover:bg-slate-100 rounded-2xl">الأسئلة الشائعة</a>
+                <a href="https://wa.me/212760767265" target="_blank" 
+                   class="mt-2 flex items-center justify-center gap-x-2 py-3 bg-emerald-500 text-white rounded-3xl font-semibold">
+                    <i class="fab fa-whatsapp"></i> تواصل عبر واتساب
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- HERO SECTION -->
+    <section class="hero-bg text-white py-16 md:py-24">
+        <div class="max-w-screen-xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="max-w-xl">
+                    <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-3xl mb-6">
+                        <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                        <span class="text-sm font-medium">أكثر من 50,000 بطاقة مباعة هذا الشهر</span>
+                    </div>
+                    
+                    <h1 class="text-5xl md:text-6xl font-extrabold leading-[1.05] tracking-tighter mb-6">
+                        إنترنت سريع<br />
+                        <span class="bg-gradient-to-r from-blue-300 to-white bg-clip-text text-transparent">في أي مكان</span><br />
+                        بالعالم
+                    </h1>
+                    
+                    <p class="text-xl text-blue-100 max-w-md mb-8">
+                        بطاقات eSIM فورية لأكثر من 200 دولة. 
+                        تفعيل في ثوانٍ • أسعار تبدأ من 3.99$
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#destinations" 
+                           class="inline-flex items-center justify-center gap-x-3 bg-white text-slate-900 hover:bg-slate-100 transition-all font-bold px-8 h-14 rounded-3xl text-base shadow-xl active:scale-[0.985]">
+                            <span>تصفح الباقات</span>
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                        
+                        <button onclick="document.getElementById('destinations').scrollIntoView({ behavior: 'smooth' })" 
+                                class="inline-flex items-center justify-center gap-x-2 border border-white/40 hover:bg-white/10 transition-all font-semibold px-8 h-14 rounded-3xl text-base">
+                            <i class="fas fa-play-circle"></i>
+                            <span>شاهد كيفية العمل</span>
+                        </button>
+                    </div>
+                    
+                    <div class="flex items-center gap-x-6 mt-10">
+                        <div class="flex -space-x-3">
+                            <div class="w-9 h-9 rounded-full border-2 border-white overflow-hidden"><img src="https://i.pravatar.cc/36?img=28" alt="" /></div>
+                            <div class="w-9 h-9 rounded-full border-2 border-white overflow-hidden"><img src="https://i.pravatar.cc/36?img=32" alt="" /></div>
+                            <div class="w-9 h-9 rounded-full border-2 border-white overflow-hidden"><img src="https://i.pravatar.cc/36?img=47" alt="" /></div>
+                        </div>
+                        <div class="text-sm">
+                            <div class="font-semibold">انضم إلى +١٢٥ ألف مسافر</div>
+                            <div class="text-blue-200 text-xs">يثقون بنا يومياً</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hero Visual -->
+                <div class="relative hidden md:block">
+                    <div class="absolute -inset-6 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-[4rem] blur-3xl"></div>
+                    <div class="relative bg-white/10 backdrop-blur-xl border border-white/30 rounded-[3rem] p-4 shadow-2xl">
+                        <div class="bg-white rounded-3xl p-6 text-slate-900">
+                            <div class="flex items-center justify-between mb-4">
+                                <div>
+                                    <div class="text-xs text-emerald-600 font-bold">مفعل الآن</div>
+                                    <div class="font-extrabold text-2xl">🇺🇸 الولايات المتحدة</div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-emerald-500 text-xs font-bold">متصل</div>
+                                    <div class="font-mono text-sm font-bold">4.2 GB / 5 GB</div>
+                                </div>
+                            </div>
+                            
+                            <div class="h-2 bg-slate-100 rounded-full mb-1 overflow-hidden">
+                                <div class="h-2 w-[84%] bg-gradient-to-r from-emerald-400 to-blue-500 rounded-full"></div>
+                            </div>
+                            
+                            <div class="flex justify-between text-[10px] text-slate-500">
+                                <div>متبقي: 4.2 جيجا</div>
+                                <div>ينتهي في 4 أيام</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- TRUST BAR -->
+    <div class="border-b bg-white">
+        <div class="max-w-screen-xl mx-auto px-6 py-5">
+            <div class="flex flex-wrap justify-center md:justify-between items-center gap-x-8 gap-y-4 text-sm text-slate-500">
+                <div class="flex items-center gap-x-2">
+                    <i class="fas fa-shield-alt text-emerald-500"></i>
+                    <span class="font-medium">دفع آمن 100%</span>
+                </div>
+                <div class="flex items-center gap-x-2">
+                    <i class="fas fa-bolt text-amber-500"></i>
+                    <span class="font-medium">تفعيل فوري خلال 30 ثانية</span>
+                </div>
+                <div class="flex items-center gap-x-2">
+                    <i class="fas fa-globe text-blue-500"></i>
+                    <span class="font-medium">تغطية في 200+ دولة</span>
+                </div>
+                <div class="flex items-center gap-x-2">
+                    <i class="fas fa-headset text-violet-500"></i>
+                    <span class="font-medium">دعم 24/7 بالعربية</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- DESTINATIONS SECTION - UPDATED WITH ARAB + FOREIGN PACKAGES -->
+    <section id="destinations" class="max-w-screen-xl mx-auto px-6 py-16 md:py-20">
+        
+        <!-- ARAB COUNTRIES PACKAGES -->
+        <div class="mb-16">
+            <div class="text-center mb-10">
+                <div class="inline-flex items-center gap-x-2 bg-emerald-100 text-emerald-700 px-5 py-1.5 rounded-3xl text-xs font-extrabold tracking-widest mb-3">
+                    <i class="fas fa-globe"></i>
+                    <span>تعمل في كل الدول العربية</span>
+                </div>
+                <h2 class="text-4xl font-extrabold tracking-tight">باقات الدول العربية</h2>
+                <p class="mt-3 text-lg text-slate-600">باقة واحدة تعمل في جميع الدول العربية (المغرب، الجزائر، تونس، مصر، السعودية، الإمارات، الأردن، لبنان...)</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <!-- Unlimited Packages -->
+                <div onclick="openArabPackageModal('unlimited-1')" class="destination-card bg-white border-2 border-emerald-200 hover:border-emerald-400 cursor-pointer rounded-3xl p-6 group">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <div class="text-emerald-600 text-xs font-bold">غير محدود</div>
+                            <div class="font-extrabold text-2xl mt-1">1 يوم</div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-4xl font-extrabold text-emerald-600">4$</div>
+                        </div>
+                    </div>
+                    <div class="mt-6 text-sm text-emerald-700 font-semibold">إنترنت غير محدود • 5G</div>
+                    <div class="mt-4 text-xs text-slate-500">تعمل في كل الدول العربية</div>
+                    <div class="mt-5 px-5 py-2.5 bg-emerald-600 text-white text-center text-sm font-bold rounded-2xl group-hover:bg-emerald-700 transition">اطلب الآن</div>
+                </div>
+                
+                <div onclick="openArabPackageModal('unlimited-3')" class="destination-card bg-white border-2 border-emerald-200 hover:border-emerald-400 cursor-pointer rounded-3xl p-6 group">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <div class="text-emerald-600 text-xs font-bold">غير محدود</div>
+                            <div class="font-extrabold text-2xl mt-1">3 أيام</div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-4xl font-extrabold text-emerald-600">9.5$</div>
+                        </div>
+                    </div>
+                    <div class="mt-6 text-sm text-emerald-700 font-semibold">إنترنت غير محدود • 5G</div>
+                    <div class="mt-4 text-xs text-slate-500">تعمل في كل الدول العربية</div>
+                    <div class="mt-5 px-5 py-2.5 bg-emerald-600 text-white text-center text-sm font-bold rounded-2xl group-hover:bg-emerald-700 transition">اطلب الآن</div>
+                </div>
+                
+                <div onclick="openArabPackageModal('unlimited-5')" class="destination-card bg-white border-2 border-emerald-200 hover:border-emerald-400 cursor-pointer rounded-3xl p-6 group">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <div class="text-emerald-600 text-xs font-bold">غير محدود</div>
+                            <div class="font-extrabold text-2xl mt-1">5 أيام</div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-4xl font-extrabold text-emerald-600">15$</div>
+                        </div>
+                    </div>
+                    <div class="mt-6 text-sm text-emerald-700 font-semibold">إنترنت غير محدود • 5G</div>
+                    <div class="mt-4 text-xs text-slate-500">تعمل في كل الدول العربية</div>
+                    <div class="mt-5 px-5 py-2.5 bg-emerald-600 text-white text-center text-sm font-bold rounded-2xl group-hover:bg-emerald-700 transition">اطلب الآن</div>
+                </div>
+                
+                <!-- Limited Packages -->
+                <div onclick="openArabPackageModal('limited-1gb')" class="destination-card bg-white border border-slate-200 hover:border-blue-300 cursor-pointer rounded-3xl p-6 group">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <div class="text-blue-600 text-xs font-bold">محدود</div>
+                            <div class="font-extrabold text-2xl mt-1">1 جيجا</div>
+                            <div class="text-xs text-slate-500">7 أيام</div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-4xl font-extrabold text-blue-600">3.8$</div>
+                        </div>
+                    </div>
+                    <div class="mt-5 text-xs text-slate-500">تعمل في كل الدول العربية</div>
+                    <div class="mt-5 px-5 py-2.5 bg-blue-600 text-white text-center text-sm font-bold rounded-2xl group-hover:bg-blue-700 transition">اطلب الآن</div>
+                </div>
+                
+                <div onclick="openArabPackageModal('limited-2gb')" class="destination-card bg-white border border-slate-200 hover:border-blue-300 cursor-pointer rounded-3xl p-6 group">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <div class="text-blue-600 text-xs font-bold">محدود</div>
+                            <div class="font-extrabold text-2xl mt-1">2 جيجا</div>
+                            <div class="text-xs text-slate-500">15 يوم</div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-4xl font-extrabold text-blue-600">4.8$</div>
+                        </div>
+                    </div>
+                    <div class="mt-5 text-xs text-slate-500">تعمل في كل الدول العربية</div>
+                    <div class="mt-5 px-5 py-2.5 bg-blue-600 text-white text-center text-sm font-bold rounded-2xl group-hover:bg-blue-700 transition">اطلب الآن</div>
+                </div>
+                
+                <div onclick="openArabPackageModal('limited-3gb')" class="destination-card bg-white border border-slate-200 hover:border-blue-300 cursor-pointer rounded-3xl p-6 group">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <div class="text-blue-600 text-xs font-bold">محدود</div>
+                            <div class="font-extrabold text-2xl mt-1">3 جيجا</div>
+                            <div class="text-xs text-slate-500">30 يوم</div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-4xl font-extrabold text-blue-600">7.5$</div>
+                        </div>
+                    </div>
+                    <div class="mt-5 text-xs text-slate-500">تعمل في كل الدول العربية</div>
+                    <div class="mt-5 px-5 py-2.5 bg-blue-600 text-white text-center text-sm font-bold rounded-2xl group-hover:bg-blue-700 transition">اطلب الآن</div>
+                </div>
+                
+                <div onclick="openArabPackageModal('limited-5gb')" class="destination-card bg-white border border-slate-200 hover:border-blue-300 cursor-pointer rounded-3xl p-6 group">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <div class="text-blue-600 text-xs font-bold">محدود</div>
+                            <div class="font-extrabold text-2xl mt-1">5 جيجا</div>
+                            <div class="text-xs text-slate-500">30 يوم</div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-4xl font-extrabold text-blue-600">9.5$</div>
+                        </div>
+                    </div>
+                    <div class="mt-5 text-xs text-slate-500">تعمل في كل الدول العربية</div>
+                    <div class="mt-5 px-5 py-2.5 bg-blue-600 text-white text-center text-sm font-bold rounded-2xl group-hover:bg-blue-700 transition">اطلب الآن</div>
+                </div>
+                
+                <div onclick="openArabPackageModal('limited-10gb')" class="destination-card bg-white border border-slate-200 hover:border-blue-300 cursor-pointer rounded-3xl p-6 group col-span-1 sm:col-span-2 lg:col-span-1">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <div class="text-blue-600 text-xs font-bold">محدود</div>
+                            <div class="font-extrabold text-2xl mt-1">10 جيجا</div>
+                            <div class="text-xs text-slate-500">30 يوم</div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-4xl font-extrabold text-blue-600">17$</div>
+                        </div>
+                    </div>
+                    <div class="mt-5 text-xs text-slate-500">تعمل في كل الدول العربية</div>
+                    <div class="mt-5 px-5 py-2.5 bg-blue-600 text-white text-center text-sm font-bold rounded-2xl group-hover:bg-blue-700 transition">اطلب الآن</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FOREIGN COUNTRIES PACKAGES -->
+        <div>
+            <div class="text-center mb-10">
+                <div class="inline-block px-4 py-1 bg-blue-100 text-blue-700 text-xs font-bold tracking-widest rounded-3xl mb-3">الوجهات العالمية</div>
+                <h2 class="text-4xl font-extrabold tracking-tight">باقات الدول الأجنبية</h2>
+                <p class="mt-3 text-lg text-slate-600">تغطية ممتازة في أكثر من 200 دولة حول العالم</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
+                <!-- USA -->
+                <div class="bg-white border border-slate-200 rounded-3xl p-6 group">
+                    <div class="flex items-center gap-x-3 mb-4">
+                        <span class="text-4xl">🇺🇸</span>
+                        <div class="font-extrabold text-xl">الولايات المتحدة</div>
+                    </div>
+                    <ul class="text-sm space-y-1.5 text-slate-600 mb-5">
+                        <li class="flex items-center gap-x-2"><i class="fas fa-check text-emerald-500 text-xs"></i> سرعة 5G عالية</li>
+                        <li class="flex items-center gap-x-2"><i class="fas fa-check text-emerald-500 text-xs"></i> تغطية في 50 ولاية</li>
+                        <li class="flex items-center gap-x-2"><i class="fas fa-check text-emerald-500 text-xs"></i> باقات من 5 جيجا إلى 50 جيجا</li>
+                    </ul>
+                    <button onclick="contactWhatsApp('الولايات المتحدة')" class="w-full py-3 bg-slate-900 hover:bg-black text-white text-sm font-bold rounded-2xl flex items-center justify-center gap-x-2">
+                        <i class="fab fa-whatsapp"></i> تواصل للشراء
+                    </button>
+                </div>
+                
+                <!-- Europe -->
+                <div class="bg-white border border-slate-200 rounded-3xl p-6 group">
+                    <div class="flex items-center gap-x-3 mb-4">
+                        <span class="text-4xl">🇪🇺</span>
+                        <div class="font-extrabold text-xl">أوروبا</div>
+                    </div>
+                    <ul class="text-sm space-y-1.5 text-slate-600 mb-5">
+                        <li class="flex items-center gap-x-2"><i class="fas fa-check text-emerald-500 text-xs"></i> 30 دولة أوروبية</li>
+                        <li class="flex items-center gap-x-2"><i class="fas fa-check text-emerald-500 text-xs"></i> سرعة 5G في معظم الدول</li>
+                        <li class="flex items-center gap-x-2"><i class="fas fa-check text-emerald-500 text-xs"></i> باقات 10-100 جيجا</li>
+                    </ul>
+                    <button onclick="contactWhatsApp('أوروبا')" class="w-full py-3 bg-slate-900 hover:bg-black text-white text-sm font-bold rounded-2xl flex items-center justify-center gap-x-2">
+                        <i class="fab fa-whatsapp"></i> تواصل للشراء
+                    </button>
+                </div>
+                
+                <!-- Turkey -->
+                <div class="bg-white border border-slate-200 rounded-3xl p-6 group">
+                    <div class="flex items-center gap-x-3 mb-4">
+                        <span class="text-4xl">🇹🇷</span>
+                        <div class="font-extrabold text-xl">تركيا</div>
+                    </div>
+                    <ul class="text-sm space-y-1.5 text-slate-600 mb-5">
+                        <li class="flex items-center gap-x-2"><i class="fas fa-check text-emerald-500 text-xs"></i> تغطية كاملة (إسطنبول، أنطاليا...)</li>
+                        <li class="flex items-center gap-x-2"><i class="fas fa-check text-emerald-500 text-xs"></i> سرعة ممتازة</li>
+                        <li class="flex items-center gap-x-2"><i class="fas fa-check text-emerald-500 text-xs"></i> باقات من 8 جيجا</li>
+                    </ul>
+                    <button onclick="contactWhatsApp('تركيا')" class="w-full py-3 bg-slate-900 hover:bg-black text-white text-sm font-bold rounded-2xl flex items-center justify-center gap-x-2">
+                        <i class="fab fa-whatsapp"></i> تواصل للشراء
+                    </button>
+                </div>
+                
+                <!-- Thailand -->
+                <div class="bg-white border border-slate-200 rounded-3xl p-6 group">
+                    <div class="flex items-center gap-x-3 mb-4">
+                        <span class="text-4xl">🇹🇭</span>
+                        <div class="font-extrabold text-xl">تايلاند</div>
+                    </div>
+                    <ul class="text-sm space-y-1.5 text-slate-600 mb-5">
+                        <li class="flex items-center gap-x-2"><i class="fas fa-check text-emerald-500 text-xs"></i> تغطية في بانكوك وبوكيت</li>
+                        <li class="flex items-center gap-x-2"><i class="fas fa-check text-emerald-500 text-xs"></i> سرعة عالية جداً</li>
+                        <li class="flex items-center gap-x-2"><i class="fas fa-check text-emerald-500 text-xs"></i> باقات 7-30 جيجا</li>
+                    </ul>
+                    <button onclick="contactWhatsApp('تايلاند')" class="w-full py-3 bg-slate-900 hover:bg-black text-white text-sm font-bold rounded-2xl flex items-center justify-center gap-x-2">
+                        <i class="fab fa-whatsapp"></i> تواصل للشراء
+                    </button>
+                </div>
+                
+                <!-- Japan -->
+                <div class="bg-white border border-slate-200 rounded-3xl p-6 group">
+                    <div class="flex items-center gap-x-3 mb-4">
+                        <span class="text-4xl">🇯🇵</span>
+                        <div class="font-extrabold text-xl">اليابان</div>
+                    </div>
+                    <ul class="text-sm space-y-1.5 text-slate-600 mb-5">
+                        <li class="flex items-center gap-x-2"><i class="fas fa-check text-emerald-500 text-xs"></i> سرعة فائقة (أسرع شبكات العالم)</li>
+                        <li class="flex items-center gap-x-2"><i class="fas fa-check text-emerald-500 text-xs"></i> تغطية في طوكيو وكيوتو</li>
+                        <li class="flex items-center gap-x-2"><i class="fas fa-check text-emerald-500 text-xs"></i> باقات 6-20 جيجا</li>
+                    </ul>
+                    <button onclick="contactWhatsApp('اليابان')" class="w-full py-3 bg-slate-900 hover:bg-black text-white text-sm font-bold rounded-2xl flex items-center justify-center gap-x-2">
+                        <i class="fab fa-whatsapp"></i> تواصل للشراء
+                    </button>
+                </div>
+            </div>
+            
+            <div class="mt-6 text-center text-sm text-slate-500">
+                باقات أخرى (أستراليا، كندا، البرازيل، الهند...) — <span onclick="contactWhatsApp('أي وجهة أخرى')" class="text-blue-600 font-semibold cursor-pointer hover:underline">تواصل معنا للتفاصيل</span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- HOW IT WORKS -->
+    <section id="how" class="bg-white border-t border-b py-16 md:py-20">
+        <div class="max-w-screen-xl mx-auto px-6">
+            <div class="text-center mb-14">
+                <h2 class="text-4xl font-extrabold tracking-tight">كيفية الاستخدام في 4 خطوات بسيطة</h2>
+                <p class="mt-3 text-lg text-slate-600">من الطلب إلى التفعيل في أقل من دقيقتين</p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+                <!-- Step 1 -->
+                <div class="text-center group">
+                    <div class="mx-auto w-20 h-20 bg-blue-100 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <div class="step-number bg-blue-600 text-white rounded-2xl shadow-inner">1</div>
+                    </div>
+                    <h4 class="font-bold text-xl mb-2">اختر الوجهة والخطة</h4>
+                    <p class="text-slate-600 text-[15px]">تصفح أكثر من 200 دولة واختر الخطة المناسبة لرحلتك</p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="text-center group">
+                    <div class="mx-auto w-20 h-20 bg-blue-100 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <div class="step-number bg-blue-600 text-white rounded-2xl shadow-inner">2</div>
+                    </div>
+                    <h4 class="font-bold text-xl mb-2">أكمل عملية الطلب</h4>
+                    <p class="text-slate-600 text-[15px]">ادفع بأمان عبر البطاقة أو باي بال أو التحويل البنكي</p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="text-center group">
+                    <div class="mx-auto w-20 h-20 bg-blue-100 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <div class="step-number bg-blue-600 text-white rounded-2xl shadow-inner">3</div>
+                    </div>
+                    <h4 class="font-bold text-xl mb-2">استلم الـ QR Code</h4>
+                    <p class="text-slate-600 text-[15px]">يصلك رمز QR فوراً على بريدك الإلكتروني وواتساب</p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="text-center group">
+                    <div class="mx-auto w-20 h-20 bg-blue-100 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <div class="step-number bg-blue-600 text-white rounded-2xl shadow-inner">4</div>
+                    </div>
+                    <h4 class="font-bold text-xl mb-2">فعّل على هاتفك</h4>
+                    <p class="text-slate-600 text-[15px]">امسح الرمز في إعدادات eSIM واستمتع بالإنترنت فوراً</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <div class="inline-flex items-center gap-x-2 bg-emerald-100 text-emerald-700 px-6 py-3 rounded-3xl text-sm font-semibold">
+                    <i class="fas fa-check-circle"></i>
+                    <span>متوافق مع جميع هواتف iPhone 11+ و Android 9+</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- WHY US -->
+    <section id="why" class="max-w-screen-xl mx-auto px-6 py-16 md:py-20">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="uppercase tracking-[3px] text-blue-600 text-xs font-extrabold mb-3">الأفضل في السوق</div>
+                <h2 class="text-4xl font-extrabold tracking-tight leading-none">لماذا يختارنا<br />آلاف المسافرين؟</h2>
+                
+                <div class="mt-8 space-y-6">
+                    <div class="flex gap-5">
+                        <div class="mt-1"><i class="fas fa-bolt text-3xl text-amber-500"></i></div>
+                        <div>
+                            <div class="font-bold">تفعيل فوري خلال ثوانٍ</div>
+                            <div class="text-slate-600 mt-1 text-[15px]">لا تنتظر. ابدأ استخدام الإنترنت فور وصولك للمطار.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-5">
+                        <div class="mt-1"><i class="fas fa-globe-americas text-3xl text-blue-500"></i></div>
+                        <div>
+                            <div class="font-bold">تغطية في أكثر من 200 دولة</div>
+                            <div class="text-slate-600 mt-1 text-[15px]">شبكات محلية قوية في كل وجهة.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-5">
+                        <div class="mt-1"><i class="fas fa-headset text-3xl text-violet-500"></i></div>
+                        <div>
+                            <div class="font-bold">دعم فني باللغة العربية 24/7</div>
+                            <div class="text-slate-600 mt-1 text-[15px]">فريقنا جاهز دائماً لمساعدتك عبر الواتساب والبريد.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-3xl p-8 md:p-10 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-40 h-40 bg-blue-500/10 rounded-full -translate-y-1/3 translate-x-1/3"></div>
+                
+                <div class="relative">
+                    <div class="flex items-center gap-x-4 mb-8">
+                        <div class="text-5xl">⭐️</div>
+                        <div>
+                            <div class="text-4xl font-extrabold">4.98</div>
+                            <div class="text-blue-300 text-sm">تقييم من 12,847 عميل</div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check text-emerald-400 mt-1"></i>
+                            <span class="text-sm">لا توجد رسوم خفية أو تكاليف إضافية</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check text-emerald-400 mt-1"></i>
+                            <span class="text-sm">إمكانية مشاركة البيانات مع 5 أجهزة</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check text-emerald-400 mt-1"></i>
+                            <span class="text-sm">استرداد كامل خلال 24 ساعة إذا لم تعمل</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check text-emerald-400 mt-1"></i>
+                            <span class="text-sm">سرعة تصل إلى 5G في الدول المدعومة</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- TESTIMONIALS -->
+    <section class="bg-slate-900 py-16 text-white">
+        <div class="max-w-screen-xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold">ماذا يقول عملاؤنا</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Testimonial 1 -->
+                <div class="bg-white/5 backdrop-blur border border-white/10 rounded-3xl p-7">
+                    <div class="flex gap-1 text-amber-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="italic">"استخدمتها في رحلتي إلى تركيا. الإنترنت كان سريعاً جداً ولم أواجه أي مشكلة. أفضل قرار اتخذته!"</p>
+                    <div class="mt-6 flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/40?img=12" class="w-10 h-10 rounded-full" alt="" />
+                        <div>
+                            <div class="font-semibold">أحمد الشريف</div>
+                            <div class="text-xs text-white/60">الرياض → إسطنبول</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white/5 backdrop-blur border border-white/10 rounded-3xl p-7">
+                    <div class="flex gap-1 text-amber-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="italic">"كنت قلقة من التفعيل لكن الأمر كان سهلاً للغاية. وصلني الـ QR في أقل من دقيقة. شكراً eSIM4Arab!"</p>
+                    <div class="mt-6 flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/40?img=25" class="w-10 h-10 rounded-full" alt="" />
+                        <div>
+                            <div class="font-semibold">سارة العتيبي</div>
+                            <div class="text-xs text-white/60">جدة → دبي</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white/5 backdrop-blur border border-white/10 rounded-3xl p-7">
+                    <div class="flex gap-1 text-amber-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="italic">"سافرت إلى أوروبا لمدة شهر واستخدمت الخطة الأوروبية. وفرت عليّ مئات الدولارات مقارنة بالتجوال العادي."</p>
+                    <div class="mt-6 flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/40?img=60" class="w-10 h-10 rounded-full" alt="" />
+                        <div>
+                            <div class="font-semibold">خالد الدوسري</div>
+                            <div class="text-xs text-white/60">الدمام → باريس</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- eSIM TRACKER SECTION -->
+    <section class="max-w-screen-xl mx-auto px-6 py-16 md:py-20 bg-gradient-to-br from-sky-50 to-emerald-50">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-10">
+                <div class="inline-block px-5 py-1.5 bg-white shadow-sm border border-sky-200 text-sky-700 text-xs font-extrabold rounded-3xl mb-4">مميزات حصرية</div>
+                <h2 class="text-4xl font-extrabold tracking-tight">تتبع استهلاك eSIM الخاص بك مباشرة</h2>
+                <p class="mt-3 text-lg text-slate-600">تحقق من رصيدك المتبقي، تاريخ الانتهاء، وحالة الباقة في أي لحظة</p>
+            </div>
+            
+            <div class="esim-wrap" style="min-height:auto; padding:0; background:transparent;">
+                <div class="esim-card" style="max-width:100%; box-shadow:0 25px 70px rgba(15,23,42,.12);">
+                    <div class="esim-icon">📶</div>
+                    <span class="esim-badge">Live eSIM Tracker</span>
+                    <h1 style="font-size:32px; margin:12px 0 8px;">Track Your eSIM Usage</h1>
+                    <p class="esim-subtitle" style="margin-bottom:20px;">
+                        Check your data usage, remaining balance, expiry date, and package status.
+                    </p>
+                    <div class="esim-form">
+                        <input id="esimId" type="text" placeholder="Paste your eSIM ID here" style="font-size:15px; padding:14px 18px;" />
+                        <button onclick="checkUsage()" style="padding:14px 22px; font-size:15px;">Check Usage</button>
+                    </div>
+                    <div id="result" style="margin-top:18px;"></div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-6 text-xs text-slate-500">
+                البيانات تأتي مباشرة من شبكة eSIM • قد يستغرق التحديث بضع ثواني
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- SEO KEYWORDS SECTION -->
+    <section class="max-w-screen-xl mx-auto px-6 py-12">
+        <div class="bg-white border border-slate-200 rounded-3xl p-8 modern-shadow">
+            <h2 class="text-3xl font-extrabold mb-4">eSIM للعرب: إنترنت سريع للسفر بدون شريحة</h2>
+            <p class="text-slate-600 leading-8">
+                eSIM4Arab يساعد المسافرين العرب على الحصول على <strong>بطاقة eSIM</strong> بسهولة للسفر داخل الدول العربية وخارجها.
+                يمكنك طلب <strong>eSIM Morocco</strong> أو <strong>eSIM Maroc</strong> أو باقات eSIM لأوروبا، كندا، أمريكا، تركيا، السعودية، الإمارات، مصر، قطر، الكويت، الأردن وباقي الوجهات.
+                الخدمة مناسبة لمن يبحث عن <strong>انترنت eSIM للسفر</strong>، <strong>شريحة eSIM بدون شريحة فعلية</strong>، و<strong>تتبع استهلاك eSIM</strong> لمعرفة المتبقي وتاريخ انتهاء الباقة.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-2 text-xs font-bold text-blue-700">
+                <span class="px-3 py-1 bg-blue-50 rounded-full">eSIM للعرب</span>
+                <span class="px-3 py-1 bg-blue-50 rounded-full">eSIM Morocco</span>
+                <span class="px-3 py-1 bg-blue-50 rounded-full">eSIM Maroc</span>
+                <span class="px-3 py-1 bg-blue-50 rounded-full">بطاقة eSIM للسفر</span>
+                <span class="px-3 py-1 bg-blue-50 rounded-full">تتبع استهلاك eSIM</span>
+                <span class="px-3 py-1 bg-blue-50 rounded-full">eSIM دول عربية</span>
+                <span class="px-3 py-1 bg-blue-50 rounded-full">eSIM أوروبا</span>
+                <span class="px-3 py-1 bg-blue-50 rounded-full">eSIM كندا</span>
+            </div>
+            <div class="mt-6">
+                <a href="https://wa.me/212760767265?text=مرحبا، أريد طلب بطاقة eSIM" target="_blank" class="inline-flex items-center justify-center gap-x-2 px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded-3xl">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>اطلب عبر واتساب </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="max-w-screen-xl mx-auto px-6 py-16 md:py-20">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-10">
+                <h2 class="text-4xl font-extrabold tracking-tight">الأسئلة الشائعة</h2>
+                <p class="mt-2 text-slate-600">كل ما تحتاج معرفته عن بطاقات eSIM</p>
+            </div>
+            
+            <div class="space-y-3">
+                <!-- FAQ Item 1 -->
+                <div class="border border-slate-200 rounded-3xl overflow-hidden">
+                    <button onclick="toggleFAQ(this)" class="faq-question w-full px-6 py-5 flex items-center justify-between text-left bg-white hover:bg-slate-50">
+                        <span class="font-semibold">ما هي بطاقة eSIM؟</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-6 text-slate-600 text-[15px]">
+                        eSIM هي شريحة إلكترونية مدمجة في هاتفك تتيح لك الاتصال بالإنترنت دون الحاجة إلى بطاقة SIM فيزيائية. يمكنك تفعيلها بمسح رمز QR.
+                    </div>
+                </div>
+                
+                <div class="border border-slate-200 rounded-3xl overflow-hidden">
+                    <button onclick="toggleFAQ(this)" class="faq-question w-full px-6 py-5 flex items-center justify-between text-left bg-white hover:bg-slate-50">
+                        <span class="font-semibold">هل تعمل بطاقاتكم على جميع الهواتف؟</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-6 text-slate-600 text-[15px]">
+                        تعمل على معظم الهواتف الحديثة: iPhone XS فأعلى، Samsung Galaxy S20 فأعلى، Google Pixel 3 فأعلى، ومعظم الهواتف الصينية الحديثة. يمكنك التحقق من توافق هاتفك مجاناً.
+                    </div>
+                </div>
+                
+                <div class="border border-slate-200 rounded-3xl overflow-hidden">
+                    <button onclick="toggleFAQ(this)" class="faq-question w-full px-6 py-5 flex items-center justify-between text-left bg-white hover:bg-slate-50">
+                        <span class="font-semibold">متى يصلني الـ QR Code بعد الطلب؟</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-6 text-slate-600 text-[15px]">
+                        يصلك فوراً خلال أقل من 60 ثانية على بريدك الإلكتروني وعبر واتساب. في حال التأخير، تواصل معنا فوراً.
+                    </div>
+                </div>
+                
+                <div class="border border-slate-200 rounded-3xl overflow-hidden">
+                    <button onclick="toggleFAQ(this)" class="faq-question w-full px-6 py-5 flex items-center justify-between text-left bg-white hover:bg-slate-50">
+                        <span class="font-semibold">هل يمكنني استخدام البطاقة في أكثر من دولة؟</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-6 text-slate-600 text-[15px]">
+                        نعم! بعض الباقات (مثل باقة أوروبا) تغطي عدة دول. تحقق من تفاصيل كل باقة قبل الطلب.
+                    </div>
+                </div>
+                
+                <div class="border border-slate-200 rounded-3xl overflow-hidden">
+                    <button onclick="toggleFAQ(this)" class="faq-question w-full px-6 py-5 flex items-center justify-between text-left bg-white hover:bg-slate-50">
+                        <span class="font-semibold">ماذا لو لم أتمكن من التفعيل؟</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-6 text-slate-600 text-[15px]">
+                        فريق الدعم لدينا جاهز 24 ساعة. نضمن لك التفعيل أو استرداد كامل المبلغ خلال 24 ساعة.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FINAL CTA -->
+    <section class="bg-gradient-to-br from-blue-600 to-indigo-700 py-16 text-white">
+        <div class="max-w-screen-xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-extrabold mb-4">جاهز لرحلتك القادمة؟</h2>
+            <p class="text-xl text-blue-100 max-w-md mx-auto mb-8">اطلب بطاقتك الآن واستمتع بإنترنت سريع من اليوم الأول</p>
+            
+            <button onclick="document.getElementById('destinations').scrollIntoView({ behavior: 'smooth' })" 
+                    class="bg-white text-blue-700 hover:bg-amber-50 transition-all font-extrabold text-lg px-14 h-16 rounded-3xl shadow-xl inline-flex items-center gap-x-3 active:scale-[0.985]">
+                <span>ابدأ الآن - اختر وجهتك</span>
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            
+            <div class="mt-6 text-xs text-blue-200">دفع آمن • استرداد خلال 24 ساعة • دعم عربي فوري</div>
+        </div>
+    </section>
+    
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-14">
+        <div class="max-w-screen-xl mx-auto px-6 grid md:grid-cols-12 gap-y-12">
+            <div class="md:col-span-5">
+                <div class="flex items-center gap-x-3 mb-4">
+                    <div class="w-9 h-9 bg-white/10 rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-globe text-white"></i>
+                    </div>
+                    <span class="font-extrabold text-3xl text-white">eSIM4Arab</span>
+                </div>
+                <div class="max-w-xs text-sm">أفضل مزود لبطاقات eSIM في الشرق الأوسط. نوصلك بالعالم بأسعار لا تُقاوم.</div>
+                
+                <div class="flex gap-x-4 mt-6">
+                    <a href="#" class="text-xl hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-xl hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-xl hover:text-white"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/212760767265" class="text-xl hover:text-white"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="md:col-span-3">
+                <div class="font-semibold text-white mb-4">روابط سريعة</div>
+                <div class="space-y-2 text-sm">
+                    <a href="#destinations" class="block hover:text-white">الباقات الشائعة</a>
+                    <a href="#how" class="block hover:text-white">دليل الاستخدام</a>
+                    <a href="#faq" class="block hover:text-white">الأسئلة الشائعة</a>
+                    <a href="#" class="block hover:text-white">تحقق من توافق هاتفك</a>
+                </div>
+            </div>
+            
+            <div class="md:col-span-4">
+                <div class="font-semibold text-white mb-4">تواصل معنا</div>
+                
+                <div class="space-y-3 text-sm">
+                    <a href="https://wa.me/212760767265" class="flex items-center gap-x-3 hover:text-white group">
+                        <i class="fab fa-whatsapp text-emerald-400 group-hover:scale-110 transition"></i>
+                        <span>0760767265</span>
+                    </a>
+                    <div class="flex items-center gap-x-3">
+                        <i class="fas fa-envelope text-blue-400"></i>
+                        <span>support@esim4arab.com</span>
+                    </div>
+                    <div class="flex items-center gap-x-3">
+                        <i class="fas fa-clock text-amber-400"></i>
+                        <span>الدعم متاح 24 ساعة يومياً</span>
+                    </div>
+                </div>
+                
+                <div class="mt-8 text-xs border-t border-white/10 pt-4">
+                    © 2026 eSIM4Arab. جميع الحقوق محفوظة.<br />
+                    تصميم وتطوير خصيصاً لعملائنا في الوطن العربي
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- PURCHASE MODAL -->
+    <div id="purchase-modal" onclick="if (event.target.id === 'purchase-modal') closeModal()" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-[100] flex items-end md:items-center justify-center">
+        <div onclick="event.stopImmediatePropagation()" class="bg-white w-full md:w-[440px] md:rounded-3xl md:m-4 rounded-t-3xl p-7 esim-modal">
+            
+            <!-- Modal Header -->
+            <div class="flex items-center justify-between mb-6">
+                <div>
+                    <div id="modal-flag" class="text-5xl mb-1"></div>
+                    <div id="modal-country" class="font-extrabold text-2xl"></div>
+                </div>
+                <button onclick="closeModal()" class="w-9 h-9 flex items-center justify-center text-slate-400 hover:text-slate-600">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            
+            <div id="modal-plan" class="bg-slate-50 border border-slate-100 rounded-2xl p-4 mb-6">
+                <!-- Dynamic content -->
+            </div>
+            
+            <!-- Purchase Form -->
+            <form id="purchase-form" onsubmit="handlePurchase(event)">
+                <div class="mb-5">
+                    <label class="block text-xs font-bold text-slate-500 mb-1.5">البريد الإلكتروني <span class="text-red-500">*</span></label>
+                    <input type="email" id="email" required placeholder="your@email.com" 
+ class="w-full border border-slate-300 focus:border-blue-500 transition px-4 py-3 rounded-2xl text-sm outline-none" />
+                </div>
+                
+                <div class="mb-5">
+                    <label class="block text-xs font-bold text-slate-500 mb-1.5">رقم الواتساب (اختياري)</label>
+                    <input type="tel" id="phone" placeholder="+966 5X XXX XXXX" 
+ class="w-full border border-slate-300 focus:border-blue-500 transition px-4 py-3 rounded-2xl text-sm outline-none" />
+                </div>
+                
+                <div class="mb-6">
+                    <label class="block text-xs font-bold text-slate-500 mb-1.5">طريقة الدفع</label>
+                    <div class="grid grid-cols-3 gap-3">
+                        <div onclick="selectPayment(this, 'card')" class="payment-option border border-blue-600 bg-blue-50 cursor-pointer flex flex-col items-center justify-center py-3 rounded-2xl">
+                            <i class="fas fa-credit-card text-blue-600 text-xl mb-1"></i>
+                            <span class="text-xs font-semibold">بطاقة</span>
+                        </div>
+                        <div onclick="selectPayment(this, 'paypal')" class="payment-option border border-slate-300 hover:border-slate-400 cursor-pointer flex flex-col items-center justify-center py-3 rounded-2xl">
+                            <i class="fab fa-paypal text-[#003087] text-xl mb-1"></i>
+                            <span class="text-xs font-semibold">PayPal</span>
+                        </div>
+                        <div onclick="selectPayment(this, 'bank')" class="payment-option border border-slate-300 hover:border-slate-400 cursor-pointer flex flex-col items-center justify-center py-3 rounded-2xl">
+                            <i class="fas fa-university text-slate-700 text-xl mb-1"></i>
+                            <span class="text-xs font-semibold">تحويل</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card Details (shown when card selected) -->
+                <div id="card-details" class="hidden mb-6">
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="col-span-2">
+                            <label class="block text-xs font-bold text-slate-500 mb-1">رقم البطاقة</label>
+                            <input type="text" value="4242 4242 4242 4242" class="w-full border border-slate-300 px-4 py-3 rounded-2xl text-sm font-mono" />
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-500 mb-1">تاريخ الانتهاء</label>
+                            <input type="text" value="12/28" class="w-full border border-slate-300 px-4 py-3 rounded-2xl text-sm" />
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-500 mb-1">CVV</label>
+                            <input type="text" value="123" class="w-full border border-slate-300 px-4 py-3 rounded-2xl text-sm" />
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" 
+                        class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:brightness-105 transition text-white font-extrabold py-4 rounded-3xl flex items-center justify-center gap-x-2 text-base shadow-lg">
+                    <span>إرسال الطلب عبر واتساب</span>
+                    <i class="fas fa-lock"></i>
+                </button>
+                
+                <div class="text-center text-[10px] text-slate-400 mt-3">دفع آمن • SSL مشفر • ضمان 24 ساعة</div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Success Modal -->
+    <div id="success-modal" onclick="if (event.target.id === 'success-modal') closeSuccessModal()" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-[110] flex items-center justify-center">
+        <div onclick="event.stopImmediatePropagation()" class="bg-white w-full max-w-[380px] mx-4 rounded-3xl p-8 text-center esim-modal">
+            <div class="w-20 h-20 bg-emerald-100 rounded-full mx-auto flex items-center justify-center mb-6">
+                <i class="fas fa-check-circle text-emerald-500 text-6xl"></i>
+            </div>
+            
+            <h3 class="font-extrabold text-3xl mb-2">تم إرسال الطلب! 🎉</h3>
+            <p class="text-slate-600 mb-6">شكراً لك! سيصلك رمز QR على بريدك الإلكتروني خلال أقل من دقيقة.</p>
+            
+            <div class="bg-emerald-50 border border-emerald-100 rounded-2xl p-4 text-sm mb-6">
+                <div class="font-semibold text-emerald-700">رقم الطلب: #ESIM-2026-78421</div>
+                <div class="text-emerald-600 text-xs mt-1">يمكنك تتبع الطلب من خلال حسابك</div>
+            </div>
+            
+            <div class="flex flex-col gap-3">
+                <button onclick="closeSuccessModal()" 
+                        class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-3xl transition">
+                    العودة إلى الصفحة الرئيسية
+                </button>
+                <a href="https://wa.me/212760767265?text=مرحبا%2C%20لقد%20اشتريت%20بطاقة%20eSIM%20رقم%20الطلب%20%23ESIM-2026-78421" 
+                   target="_blank"
+                   class="text-emerald-600 hover:underline text-sm font-medium flex items-center justify-center gap-x-2">
+                    <i class="fab fa-whatsapp"></i> 
+                    <span>تواصل مع الدعم</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Tailwind Script
+        function initializeTailwind() {
+            document.documentElement.style.setProperty('--accent', '#3b82f6');
+        }
+        
+        // Navbar scroll effect
+        function initNavbar() {
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 30) {
+                    navbar.classList.add('nav-scrolled');
+                } else {
+                    navbar.classList.remove('nav-scrolled');
+                }
+            });
+            
+            // Mobile menu
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+        }
+        
+        // Destinations Data
+        const destinations = [
+            {
+                id: 1,
+                flag: "🇺🇸",
+                country: "الولايات المتحدة",
+                data: "5 جيجا",
+                days: "7 أيام",
+                price: 12.99,
+                desc: "تغطية ممتازة في نيويورك، لوس أنجلوس، ميامي وجميع المدن الرئيسية. سرعة 5G متاحة.",
+                popular: true
+            },
+            {
+                id: 2,
+                flag: "🇪🇺",
+                country: "أوروبا (اتحاد أوروبي)",
+                data: "10 جيجا",
+                days: "30 يوم",
+                price: 24.99,
+                desc: "تغطية في 30 دولة أوروبية بما في ذلك فرنسا، ألمانيا، إيطاليا، إسبانيا والمملكة المتحدة.",
+                popular: true
+            },
+            {
+                id: 3,
+                flag: "🇹🇷",
+                country: "تركيا",
+                data: "8 جيجا",
+                days: "15 يوم",
+                price: 9.99,
+                desc: "إنترنت سريع في إسطنبول، أنطاليا، بودروم وجميع المدن السياحية التركية.",
+                popular: true
+            },
+            {
+                id: 4,
+                flag: "🇦🇪",
+                country: "الإمارات العربية",
+                data: "6 جيجا",
+                days: "10 أيام",
+                price: 14.99,
+                desc: "تغطية كاملة في دبي، أبوظبي، الشارقة وجميع الإمارات. مثالية للسياح والأعمال.",
+                popular: false
+            },
+            {
+                id: 5,
+                flag: "🇹🇭",
+                country: "تايلاند",
+                data: "7 جيجا",
+                days: "14 يوم",
+                price: 11.99,
+                desc: "سرعة عالية في بانكوك، بوكيت، باتايا وجزر تايلاند الجميلة.",
+                popular: true
+            },
+            {
+                id: 6,
+                flag: "🇬🇧",
+                country: "المملكة المتحدة",
+                data: "5 جيجا",
+                days: "7 أيام",
+                price: 13.99,
+                desc: "تغطية ممتازة في لندن، مانشستر، إدنبرة وجميع المدن البريطانية.",
+                popular: false
+            },
+            {
+                id: 7,
+                flag: "🇯🇵",
+                country: "اليابان",
+                data: "6 جيجا",
+                days: "10 أيام",
+                price: 15.99,
+                desc: "إنترنت فائق السرعة في طوكيو، أوساكا، كيوتو وجميع المدن اليابانية.",
+                popular: false
+            },
+            {
+                id: 8,
+                flag: "🇪🇬",
+                country: "مصر",
+                data: "10 جيجا",
+                days: "30 يوم",
+                price: 7.99,
+                desc: "تغطية قوية في القاهرة، الإسكندرية، الغردقة وشرم الشيخ.",
+                popular: true
+            },
+            {
+                id: 9,
+                flag: "🇸🇦",
+                country: "المملكة العربية السعودية",
+                data: "8 جيجا",
+                days: "15 يوم",
+                price: 9.99,
+                desc: "تغطية في الرياض، جدة، الدمام ومكة المكرمة. مثالية للزوار.",
+                popular: false
+            },
+            {
+                id: 10,
+                flag: "🇦🇺",
+                country: "أستراليا",
+                data: "5 جيجا",
+                days: "7 أيام",
+                price: 16.99,
+                desc: "تغطية في سيدني، ملبورن، بريسبان وجميع المدن الأسترالية الرئيسية.",
+                popular: false
+            }
+        ];
+        
+        // Render Destinations
+        function renderDestinations(limit = 8) {
+            const container = document.getElementById('destinations-grid');
+            container.innerHTML = '';
+            
+            const toShow = destinations.slice(0, limit);
+            
+            toShow.forEach(dest => {
+                const cardHTML = `
+                    <div onclick="openPurchaseModal(${dest.id})" 
+                         class="destination-card bg-white border border-slate-200 hover:border-blue-200 cursor-pointer rounded-3xl p-5 group">
+                        
+                        <div class="flex items-start justify-between">
+                            <div>
+                                <div class="flag mb-3">${dest.flag}</div>
+                                <div class="font-extrabold text-xl tracking-tight">${dest.country}</div>
+                            </div>
+                            
+                            ${dest.popular ? `
+                            <div class="px-3 py-1 text-[10px] font-bold bg-amber-100 text-amber-600 rounded-2xl self-start">الأكثر مبيعاً</div>
+                            ` : ''}
+                        </div>
+                        
+                        <div class="mt-6 flex items-baseline gap-x-1">
+                            <span class="text-4xl font-extrabold tracking-tighter price-tag">${dest.price}</span>
+                            <span class="text-sm text-slate-500">USD</span>
+                        </div>
+                        
+                        <div class="mt-4 flex items-center justify-between text-sm">
+                            <div>
+                                <div class="font-semibold text-emerald-600">${dest.data}</div>
+                                <div class="text-xs text-slate-500">${dest.days}</div>
+                            </div>
+                            
+                            <div class="px-4 py-1.5 bg-blue-600 group-hover:bg-blue-700 transition text-white text-xs font-bold rounded-2xl flex items-center gap-x-1.5">
+                                <span>اطلب الآن</span>
+                                <i class="fas fa-arrow-left text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += cardHTML;
+            });
+        }
+        
+        function showAllDestinations() {
+            const container = document.getElementById('destinations-grid');
+            container.innerHTML = '';
+            
+            destinations.forEach(dest => {
+                const cardHTML = `
+                    <div onclick="openPurchaseModal(${dest.id})" 
+                         class="destination-card bg-white border border-slate-200 hover:border-blue-200 cursor-pointer rounded-3xl p-5 group">
+                        
+                        <div class="flex items-start justify-between">
+                            <div>
+                                <div class="flag mb-3">${dest.flag}</div>
+                                <div class="font-extrabold text-xl tracking-tight">${dest.country}</div>
+                            </div>
+                            
+                            ${dest.popular ? `
+                            <div class="px-3 py-1 text-[10px] font-bold bg-amber-100 text-amber-600 rounded-2xl self-start">الأكثر مبيعاً</div>
+                            ` : ''}
+                        </div>
+                        
+                        <div class="mt-6 flex items-baseline gap-x-1">
+                            <span class="text-4xl font-extrabold tracking-tighter price-tag">${dest.price}</span>
+                            <span class="text-sm text-slate-500">USD</span>
+                        </div>
+                        
+                        <div class="mt-4 flex items-center justify-between text-sm">
+                            <div>
+                                <div class="font-semibold text-emerald-600">${dest.data}</div>
+                                <div class="text-xs text-slate-500">${dest.days}</div>
+                            </div>
+                            
+                            <div class="px-4 py-1.5 bg-blue-600 group-hover:bg-blue-700 transition text-white text-xs font-bold rounded-2xl flex items-center gap-x-1.5">
+                                <span>اطلب الآن</span>
+                                <i class="fas fa-arrow-left text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += cardHTML;
+            });
+            
+            // Change button text
+            const btns = document.querySelectorAll('#destinations button');
+            if (btns.length > 0) {
+                btns[0].innerHTML = 'تم عرض جميع الوجهات';
+                btns[0].disabled = true;
+            }
+        }
+        
+        // Open Purchase Modal
+        let currentDestination = null;
+        
+        function openPurchaseModal(destId) {
+            currentDestination = destinations.find(d => d.id === destId);
+            if (!currentDestination) return;
+            
+            // Fill modal
+            document.getElementById('modal-flag').innerHTML = currentDestination.flag;
+            document.getElementById('modal-country').innerHTML = currentDestination.country;
+            
+            const planHTML = `
+                <div class="flex justify-between items-end">
+                    <div>
+                        <div class="text-xs text-slate-500">الباقة المختارة</div>
+                        <div class="font-extrabold text-xl">${currentDestination.data} • ${currentDestination.days}</div>
+                        <div class="text-emerald-600 text-xs mt-0.5">${currentDestination.desc}</div>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-xs text-slate-500">السعر الإجمالي</div>
+                        <div class="font-extrabold text-4xl tracking-tighter text-blue-600">$${currentDestination.price}</div>
+                    </div>
+                </div>
+            `;
+            document.getElementById('modal-plan').innerHTML = planHTML;
+            
+            // Show modal
+            document.getElementById('purchase-modal').classList.remove('hidden');
+            document.getElementById('purchase-modal').classList.add('flex');
+            
+            // Reset payment selection
+            document.querySelectorAll('.payment-option').forEach(el => el.classList.remove('border-blue-600', 'bg-blue-50'));
+            document.getElementById('card-details').classList.add('hidden');
+            
+            // Pre-select card
+            const cardOption = document.querySelector('.payment-option');
+            if (cardOption) {
+                cardOption.classList.add('border-blue-600', 'bg-blue-50');
+                document.getElementById('card-details').classList.remove('hidden');
+            }
+        }
+        
+        function closeModal() {
+            const modal = document.getElementById('purchase-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+        
+        // Payment selection
+        function selectPayment(element, method) {
+            // Deselect all
+            document.querySelectorAll('.payment-option').forEach(el => {
+                el.classList.remove('border-blue-600', 'bg-blue-50');
+                el.classList.add('border-slate-300');
+            });
+            
+            // Select current
+            element.classList.remove('border-slate-300');
+            element.classList.add('border-blue-600', 'bg-blue-50');
+            
+            // Show/hide card details
+            const cardDetails = document.getElementById('card-details');
+            if (method === 'card') {
+                cardDetails.classList.remove('hidden');
+            } else {
+                cardDetails.classList.add('hidden');
+            }
+        }
+        
+        // Handle Purchase
+        function handlePurchase(e) {
+            e.preventDefault();
+            
+            const btn = e.target.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            
+            btn.innerHTML = `<span class="flex items-center justify-center gap-x-2"><i class="fas fa-spinner fa-spin"></i> جاري معالجة الطلب...</span>`;
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                closeModal();
+                
+                // Show success
+                const successModal = document.getElementById('success-modal');
+                successModal.classList.remove('hidden');
+                successModal.classList.add('flex');
+                
+                // Reset button
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+                
+                // Optional: Clear form
+                document.getElementById('purchase-form').reset();
+            }, 1650);
+        }
+        
+        function closeSuccessModal() {
+            const modal = document.getElementById('success-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            
+            // Optional: Scroll to top or show thank you message
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        // FAQ Toggle
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            
+            if (answer.classList.contains('hidden')) {
+                // Close all others
+                document.querySelectorAll('.faq-answer').forEach(el => el.classList.add('hidden'));
+                document.querySelectorAll('.faq-question i').forEach(el => el.classList.remove('fa-chevron-up'));
+                document.querySelectorAll('.faq-question i').forEach(el => el.classList.add('fa-chevron-down'));
+                
+                answer.classList.remove('hidden');
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                answer.classList.add('hidden');
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        }
+        
+        // Keyboard escape
+        function initKeyboard() {
+            document.addEventListener('keydown', function(e) {
+                if (e.key === "Escape") {
+                    const purchaseModal = document.getElementById('purchase-modal');
+                    const successModal = document.getElementById('success-modal');
+                    
+                    if (!purchaseModal.classList.contains('hidden')) {
+                        closeModal();
+                    } else if (!successModal.classList.contains('hidden')) {
+                        closeSuccessModal();
+                    }
+                }
+            });
+        }
+        
+        // Main Initialization
+        function initializeWebsite() {
+            initializeTailwind();
+            initNavbar();
+            renderDestinations();
+            initKeyboard();
+            
+            // Random trust message
+            console.log('%c[eSIM4Arab] Website initialized successfully - Ready for Blogger deployment', 'color:#64748b');
+            
+            // Easter egg: Konami code for fun (optional)
+            let konami = '';
+            document.addEventListener('keydown', function(e) {
+                konami += e.key;
+                if (konami.length > 10) konami = konami.slice(-10);
+                if (konami.includes('ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightba')) {
+                    const hero = document.querySelector('.hero-bg');
+                    hero.style.background = 'linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%)';
+                    setTimeout(() => {
+                        hero.style.background = 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%)';
+                    }, 2200);
+                    konami = '';
+                }
+            });
+            
+            // Make sure all links work
+            console.log('%c[eSIM4Arab] All sections and modals ready. Perfect for Blogger XML export.', 'color:#64748b');
+        }
+        
+        // Boot the website
+        window.onload = initializeWebsite;
+        
+        // ========== NEW FUNCTIONS FOR ARAB PACKAGES & TRACKER ==========
+        
+        // Open Arab Package Modal
+        function openArabPackageModal(packageType) {
+            const modal = document.getElementById('purchase-modal');
+            const flagEl = document.getElementById('modal-flag');
+            const countryEl = document.getElementById('modal-country');
+            const planEl = document.getElementById('modal-plan');
+            
+            let title = '';
+            let price = '';
+            let desc = 'تعمل في كل الدول العربية (المغرب، الجزائر، تونس، مصر، السعودية، الإمارات، الأردن، لبنان، العراق...)';
+            
+            if (packageType === 'unlimited-1') {
+                title = 'باقة غير محدودة - 1 يوم';
+                price = '4$';
+            } else if (packageType === 'unlimited-3') {
+                title = 'باقة غير محدودة - 3 أيام';
+                price = '9.5$';
+            } else if (packageType === 'unlimited-5') {
+                title = 'باقة غير محدودة - 5 أيام';
+                price = '15$';
+            } else if (packageType === 'limited-1gb') {
+                title = '1 جيجا - 7 أيام';
+                price = '3.8$';
+            } else if (packageType === 'limited-2gb') {
+                title = '2 جيجا - 15 يوم';
+                price = '4.8$';
+            } else if (packageType === 'limited-3gb') {
+                title = '3 جيجا - 30 يوم';
+                price = '7.5$';
+            } else if (packageType === 'limited-5gb') {
+                title = '5 جيجا - 30 يوم';
+                price = '9.5$';
+            } else if (packageType === 'limited-10gb') {
+                title = '10 جيجا - 30 يوم';
+                price = '17$';
+            }
+            
+            flagEl.innerHTML = '🌍';
+            countryEl.innerHTML = 'الدول العربية';
+            
+            planEl.innerHTML = `
+                <div class="flex justify-between items-end">
+                    <div>
+                        <div class="text-xs text-emerald-600 font-bold">باقة الدول العربية</div>
+                        <div class="font-extrabold text-2xl">${title}</div>
+                        <div class="text-emerald-600 text-xs mt-1">${desc}</div>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-xs text-slate-500">السعر</div>
+                        <div class="font-extrabold text-4xl tracking-tighter text-emerald-600">${price}</div>
+                    </div>
+                </div>
+            `;
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            
+            // Pre-select card payment
+            document.querySelectorAll('.payment-option').forEach(el => el.classList.remove('border-blue-600', 'bg-blue-50'));
+            const cardOpt = document.querySelector('.payment-option');
+            if (cardOpt) cardOpt.classList.add('border-blue-600', 'bg-blue-50');
+            document.getElementById('card-details').classList.remove('hidden');
+        }
+        
+        // Contact via WhatsApp for foreign packages
+        function contactWhatsApp(country) {
+            const message = encodeURIComponent(`مرحبا، أريد شراء باقة eSIM لـ ${country}. ما هي الأسعار والتفاصيل؟`);
+            window.open(`https://wa.me/212760767265?text=${message}`, '_blank');
+        }
+        
+        // Update payment options text for clarity (Bank Card + Crypto)
+        function updatePaymentOptions() {
+            const paymentContainer = document.querySelector('#purchase-modal .grid-cols-3');
+            if (paymentContainer) {
+                paymentContainer.innerHTML = `
+                    <div onclick="selectPayment(this, 'card')" class="payment-option border border-blue-600 bg-blue-50 cursor-pointer flex flex-col items-center justify-center py-3 rounded-2xl">
+                        <i class="fas fa-credit-card text-blue-600 text-xl mb-1"></i>
+                        <span class="text-xs font-semibold">بطاقة بنكية</span>
+                    </div>
+                    <div onclick="selectPayment(this, 'crypto')" class="payment-option border border-slate-300 hover:border-slate-400 cursor-pointer flex flex-col items-center justify-center py-3 rounded-2xl">
+                        <i class="fab fa-bitcoin text-orange-500 text-xl mb-1"></i>
+                        <span class="text-xs font-semibold">Crypto (USDT)</span>
+                    </div>
+                    <div onclick="selectPayment(this, 'bank')" class="payment-option border border-slate-300 hover:border-slate-400 cursor-pointer flex flex-col items-center justify-center py-3 rounded-2xl">
+                        <i class="fas fa-university text-slate-700 text-xl mb-1"></i>
+                        <span class="text-xs font-semibold">تحويل بنكي</span>
+                    </div>
+                `;
+            }
+        }
+        
+        // Override selectPayment to handle crypto
+        const originalSelectPayment = window.selectPayment;
+        window.selectPayment = function(element, method) {
+            document.querySelectorAll('.payment-option').forEach(el => {
+                el.classList.remove('border-blue-600', 'bg-blue-50');
+                el.classList.add('border-slate-300');
+            });
+            element.classList.remove('border-slate-300');
+            element.classList.add('border-blue-600', 'bg-blue-50');
+            
+            const cardDetails = document.getElementById('card-details');
+            if (method === 'card') {
+                cardDetails.classList.remove('hidden');
+                cardDetails.innerHTML = `
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="col-span-2">
+                            <label class="block text-xs font-bold text-slate-500 mb-1">رقم البطاقة</label>
+                            <input type="text" value="4242 4242 4242 4242" class="w-full border border-slate-300 px-4 py-3 rounded-2xl text-sm font-mono">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-500 mb-1">تاريخ الانتهاء</label>
+                            <input type="text" value="12/28" class="w-full border border-slate-300 px-4 py-3 rounded-2xl text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-500 mb-1">CVV</label>
+                            <input type="text" value="123" class="w-full border border-slate-300 px-4 py-3 rounded-2xl text-sm">
+                        </div>
+                    </div>
+                `;
+            } else if (method === 'crypto') {
+                cardDetails.classList.remove('hidden');
+                cardDetails.innerHTML = `
+                    <div class="bg-orange-50 border border-orange-200 rounded-2xl p-4 text-sm">
+                        <div class="font-bold text-orange-700 mb-2">دفع بالعملات المشفرة (USDT / BTC)</div>
+                        <div class="text-orange-600">أرسل المبلغ إلى:</div>
+                        <div class="font-mono text-xs bg-white p-2 rounded mt-1 break-all">0x742d35Cc6634C0532925a3b844Bc454e4438f44e</div>
+                        <div class="text-[10px] text-orange-500 mt-2">سيتم تأكيد الدفع خلال 5-15 دقيقة</div>
+                    </div>
+                `;
+            } else {
+                cardDetails.classList.add('hidden');
+            }
+        }
+        
+        // Auto update payment options when modal opens
+        const originalOpenPurchaseModal = window.openPurchaseModal;
+        window.openPurchaseModal = function(destId) {
+            if (typeof originalOpenPurchaseModal === 'function') {
+                originalOpenPurchaseModal(destId);
+            }
+            setTimeout(updatePaymentOptions, 300);
+        }
+    </script>
+
+<script>
+
+const WORKER_URL = "https://withered-wind-0e1esim.9isas1maroc.workers.dev/";
+
+async function checkUsage() {
+  const id = document.getElementById("esimId").value.trim();
+  const result = document.getElementById("result");
+
+  if (!id) {
+    result.innerHTML = "<div class='error'>Please enter your eSIM ID.</div>";
+    return;
+  }
+
+  result.innerHTML = "<div class='loading'>Checking your eSIM details...</div>";
+
+  try {
+    const res = await fetch(WORKER_URL + "?id=" + encodeURIComponent(id));
+    const json = await res.json();
+
+    if (!json.success) {
+      result.innerHTML = "<div class='error'>No data found. Please check your eSIM ID.</div>";
+      return;
+    }
+
+    const bundle = json.bundle || json.simDetails?.data?.in_use_packages?.[0] || null;
+    if (!bundle) {
+      result.innerHTML = "<div class='error'>Package details not found.</div>";
+      return;
+    }
+
+    const total = Number(bundle.initial_data_quantity || 0);
+    const remaining = Number(bundle.rem_data_quantity || 0);
+    const unit = bundle.initial_data_unit || "GB";
+    const used = Math.max(0, total - remaining);
+    const percentUsed = total > 0 ? Math.min(100, Math.max(0, (used / total) * 100)) : 0;
+
+    const expiryRaw = bundle.date_expiry;
+    const activatedRaw = bundle.date_activated || "Not available";
+
+    let expiryText = "Not available";
+    let daysLeftText = "Not available";
+    let status = bundle.status || "Active";
+    let statusClass = "status-active";
+
+    if (expiryRaw) {
+      const expiryDate = new Date(String(expiryRaw).replace(" ", "T"));
+      expiryText = expiryDate.toLocaleString();
+
+      const diff = expiryDate - new Date();
+      const daysLeft = Math.ceil(diff / (1000 * 60 * 60 * 24));
+
+      if (daysLeft < 0) {
+        daysLeftText = "Expired";
+        status = "Expired";
+        statusClass = "status-expired";
+      } else {
+        daysLeftText = daysLeft + " days";
+      }
+    }
+
+    const packageName = bundle.package || "eSIM Package";
+
+    result.innerHTML = `
+      <div class="result-panel">
+        <div class="result-head">
+          <div class="package-title">${packageName}</div>
+          <div class="status-pill ${statusClass}">${status}</div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat">
+            <div class="stat-label">Total Data</div>
+            <div class="stat-value">${total} ${unit}</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Used Data</div>
+            <div class="stat-value">${used.toFixed(2)} ${unit}</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Remaining</div>
+            <div class="stat-value">${remaining} ${unit}</div>
+          </div>
+        </div>
+
+        <div class="progress-area">
+          <div class="progress-top">
+            <span>Data Used</span>
+            <span>${percentUsed.toFixed(0)}%</span>
+          </div>
+          <div class="progress-bg">
+            <div class="progress-bar" style="width:${percentUsed}%"></div>
+          </div>
+        </div>
+
+        <div class="info-grid">
+          <div class="info-box">
+            <div class="info-label">Activated Date</div>
+            <div class="info-value">${activatedRaw}</div>
+          </div>
+          <div class="info-box">
+            <div class="info-label">Expiry Date</div>
+            <div class="info-value">${expiryText}</div>
+          </div>
+          <div class="info-box">
+            <div class="info-label">Days Left</div>
+            <div class="info-value">${daysLeftText}</div>
+          </div>
+          <div class="info-box">
+            <div class="info-label">eSIM Status</div>
+            <div class="info-value">${status}</div>
+          </div>
+        </div>
+
+        <div class="small-note">
+          Usage data is provided by the eSIM network system and may take a few minutes to refresh.
+        </div>
+      </div>
+    `;
+  } catch (e) {
+    result.innerHTML = "<div class='error'>Error checking usage. Please try again later.</div>";
+  }
+}
+
+</script>]]></b:widget-setting>
+      </b:widget-settings>
+      <b:includable id='main'>
+        <b:if cond='data:view.isHomepage'>
+          <data:content/>
+        </b:if>
+      </b:includable>
+    </b:widget>
+  </b:section>
+
+  <b:section class='blog-content' id='blog-content' showaddelement='no'>
+    <b:widget id='Blog1' locked='false' title='رسائل المدونة الإلكترونية' type='Blog' visible='true'>
+      <b:widget-settings>
+        <b:widget-setting name='showDateHeader'>false</b:widget-setting>
+        <b:widget-setting name='commentLabel'>comments</b:widget-setting>
+        <b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
+        <b:widget-setting name='showShareButtons'>false</b:widget-setting>
+        <b:widget-setting name='showCommentLink'>false</b:widget-setting>
+        <b:widget-setting name='style.urlcolor'>#ffffff</b:widget-setting>
+        <b:widget-setting name='postLocationLabel'>Location:</b:widget-setting>
+        <b:widget-setting name='showAuthor'>false</b:widget-setting>
+        <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
+        <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+        <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+        <b:widget-setting name='reactionsLabel'/>
+        <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
+        <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+        <b:widget-setting name='showLabels'>false</b:widget-setting>
+        <b:widget-setting name='showLocation'>false</b:widget-setting>
+        <b:widget-setting name='postLabelsLabel'>Labels:</b:widget-setting>
+        <b:widget-setting name='showTimestamp'>false</b:widget-setting>
+        <b:widget-setting name='postsPerAd'>1</b:widget-setting>
+        <b:widget-setting name='showBacklinks'>false</b:widget-setting>
+        <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+        <b:widget-setting name='showInlineAds'>false</b:widget-setting>
+        <b:widget-setting name='showReactions'>false</b:widget-setting>
+      </b:widget-settings>
+      <b:includable id='main' var='this'>
+  <div class='blog-posts hfeed container'>
+    <b:loop index='i' values='data:posts' var='post'>
+      <b:include data='post' name='postCommentsAndAd'/>
+    </b:loop>
+  </div>
+  <b:include cond='data:view.isMultipleItems' name='postPagination'/>
+  <b:include name='feedLinks'/>
+  <b:if cond='data:blog.isGoogleEverywhereLinkTooltipEnabled'>
+    <b:include name='tooltipCss'/>
+  </b:if>
+</b:includable>
+      <b:includable id='aboutPostAuthor'>
+  <div class='author-name'>
+    <a class='g-profile' expr:href='data:post.author.profileUrl' rel='author' title='author profile'>
+      <span>
+        <data:post.author.name/>
+      </span>
+    </a>
+  </div>
+  <div>
+    <span class='author-desc'>
+      <data:post.author.aboutMe/>
+    </span>
+  </div>
+</b:includable>
+      <b:includable id='addComments'>
+  <a expr:href='data:post.commentsUrl' expr:onclick='data:post.commentsUrlOnclick'>
+    <b:message name='messages.postAComment'/>
+  </a>
+</b:includable>
+      <b:includable id='blogThisShare'>
+  <b:with value='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=270,width=475\&quot;); return false;&quot;' var='onclick'>
+    <b:include name='platformShare'/>
+  </b:with>
+</b:includable>
+      <b:includable id='bylineByName' var='byline'>
+  <b:switch var='data:byline.name'>
+  <b:case value='share'/>
+    <b:include cond='data:post.shareUrl' name='postShareButtons'/>
+  <b:case value='comments'/>
+    <b:include cond='data:post.allowComments' name='postCommentsLink'/>
+  <b:case value='location'/>
+    <b:include cond='data:post.location' name='postLocation'/>
+  <b:case value='timestamp'/>
+    <b:include cond='not data:view.isPage' name='postTimestamp'/>
+  <b:case value='author'/>
+    <b:include name='postAuthor'/>
+  <b:case value='labels'/>
+    <b:include cond='data:post.labels' name='postLabels'/>
+  <b:case value='icons'/>
+    <b:include cond='data:post.emailPostUrl' name='emailPostIcon'/>
+  </b:switch>
+</b:includable>
+      <b:includable id='bylineRegion' var='regionItems'>
+  <b:loop values='data:regionItems' var='byline'>
+    <b:include data='byline' name='bylineByName'/>
+  </b:loop>
+</b:includable>
+      <b:includable id='commentAuthorAvatar'>
+  <div class='avatar-image-container'>
+    <img class='author-avatar' expr:src='data:comment.authorAvatarSrc' height='35' width='35'/>
+  </div>
+</b:includable>
+      <b:includable id='commentDeleteIcon' var='comment'>
+  <span expr:class='&quot;item-control &quot; + data:comment.adminClass'>
+    <b:if cond='data:showCmtPopup'>
+      <div class='goog-toggle-button'>
+        <div class='goog-inline-block comment-action-icon'/>
+      </div>
+    <b:else/>
+      <a class='comment-delete' expr:href='data:comment.deleteUrl' expr:title='data:messages.deleteComment'>
+        <img src='https://resources.blogblog.com/img/icon_delete13.gif'/>
+      </a>
+    </b:if>
+  </span>
+</b:includable>
+      <b:includable id='commentForm' var='post'>
+  <div class='comment-form'>
+    <a name='comment-form'/>
+    <h4 id='comment-post-message'><data:messages.postAComment/></h4>
+    <b:if cond='data:this.messages.blogComment != &quot;&quot;'>
+      <p><data:this.messages.blogComment/></p>
+    </b:if>
+    <b:include data='post' name='commentFormIframeSrc'/>
+    <iframe allowtransparency='allowtransparency' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight ?: &quot;90px&quot;' frameborder='0' id='comment-editor' name='comment-editor' src='' width='100%'/>
+    <data:post.cmtfpIframe/>
+    <script type='text/javascript'>
+      BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;);
+    </script>
+  </div>
+</b:includable>
+      <b:includable id='commentFormIframeSrc' var='post'>
+  <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
+</b:includable>
+      <b:includable id='commentItem' var='comment'>
+  <div class='comment' expr:id='&quot;c&quot; + data:comment.id'>
+    <b:include cond='data:blog.enabledCommentProfileImages' name='commentAuthorAvatar'/>
+
+    <div class='comment-block'>
+      <div class='comment-author'>
+        <b:if cond='data:comment.authorUrl'>
+          <b:message name='messages.authorSaidWithLink'>
+            <b:param expr:value='data:comment.author' name='authorName'/>
+            <b:param expr:value='data:comment.authorUrl' name='authorUrl'/>
+          </b:message>
+        <b:else/>
+          <b:message name='messages.authorSaid'>
+            <b:param expr:value='data:comment.author' name='authorName'/>
+          </b:message>
+        </b:if>
+      </div>
+      <div expr:class='&quot;comment-body&quot; + (data:comment.isDeleted ? &quot; deleted&quot; : &quot;&quot;)'>
+        <data:comment.body/>
+      </div>
+      <div class='comment-footer'>
+        <span class='comment-timestamp'>
+          <a expr:href='data:comment.url' title='comment permalink'>
+            <data:comment.timestamp/>
+          </a>
+          <b:include data='comment' name='commentDeleteIcon'/>
+        </span>
+      </div>
+    </div>
+  </div>
+</b:includable>
+      <b:includable id='commentList' var='comments'>
+  <div id='comments-block'>
+    <b:loop values='data:comments' var='comment'>
+      <b:include data='comment' name='commentItem'/>
+    </b:loop>
+  </div>
+</b:includable>
+      <b:includable id='commentPicker' var='post'>
+  <b:if cond='data:post.showThreadedComments'>
+    <b:include data='post' name='threadedComments'/>
+  <b:else/>
+    <b:include data='post' name='comments'/>
+  </b:if>
+</b:includable>
+      <b:includable id='comments' var='post'>
+  <section expr:class='&quot;comments&quot; + (data:post.embedCommentForm ? &quot; embed&quot; : &quot;&quot;)' expr:data-num-comments='data:post.numberOfComments' id='comments'>
+    <a name='comments'/>
+    <b:if cond='data:post.allowComments'>
+
+      <b:include name='commentsTitle'/>
+
+      <div expr:id='data:widget.instanceId + &quot;_comments-block-wrapper&quot;'>
+        <b:include cond='data:post.comments' data='post.comments' name='commentList'/>
+      </div>
+
+      <b:if cond='data:post.commentPagingRequired'>
+        <div class='paging-control-container'>
+          <b:if cond='data:post.hasOlderLinks'>
+            <a expr:class='data:post.oldLinkClass' expr:href='data:post.oldestLinkUrl'>
+              <data:messages.oldest/>
+            </a>
+            <a expr:class='data:post.oldLinkClass' expr:href='data:post.olderLinkUrl'>
+              <data:messages.older/>
+            </a>
+          </b:if>
+
+          <span class='comment-range-text'>
+            <data:post.commentRangeText/>
+          </span>
+
+          <b:if cond='data:post.hasNewerLinks'>
+            <a expr:class='data:post.newLinkClass' expr:href='data:post.newerLinkUrl'>
+              <data:messages.newer/>
+            </a>
+            <a expr:class='data:post.newLinkClass' expr:href='data:post.newestLinkUrl'>
+              <data:messages.newest/>
+            </a>
+          </b:if>
+        </div>
+      </b:if>
+
+      <div class='footer'>
+        <b:if cond='data:post.embedCommentForm'>
+          <b:if cond='data:post.allowNewComments'>
+            <b:include data='post' name='commentForm'/>
+          <b:else/>
+            <data:post.noNewCommentsText/>
+          </b:if>
+        <b:else/>
+          <b:if cond='data:post.allowComments'>
+            <b:include data='post' name='addComments'/>
+          </b:if>
+        </b:if>
+      </div>
+    </b:if>
+    <b:if cond='data:showCmtPopup'>
+      <div id='comment-popup'>
+        <iframe allowtransparency='allowtransparency' frameborder='0' id='comment-actions' name='comment-actions' scrolling='no'>
+        </iframe>
+      </div>
+    </b:if>
+  </section>
+</b:includable>
+      <b:includable id='commentsLink'>
+  <a class='comment-link' expr:href='data:post.commentsUrl' expr:onclick='data:post.commentsUrlOnclick'>
+    <b:if cond='data:post.numberOfComments &gt; 0'>
+      <b:message name='messages.numberOfComments'>
+        <b:param expr:value='data:post.numberOfComments' name='numComments'/>
+      </b:message>
+    <b:else/>
+      <data:messages.postAComment/>
+    </b:if>
+  </a>
+</b:includable>
+      <b:includable id='commentsLinkIframe'>
+  <!-- G+ comments, no longer available. The includable is retained for backwards-compatibility. -->
+</b:includable>
+      <b:includable id='commentsTitle'>
+  <h3 class='title'><data:messages.comments/></h3>
+</b:includable>
+      <b:includable id='defaultAdUnit'>
+  <ins class='adsbygoogle' data-ad-format='auto' expr:data-ad-client='data:adClientId ?: data:blog.adsenseClientId' expr:data-ad-host='data:blog.adsenseHostId' expr:style='data:style ?: &quot;display: block;&quot;'>
+    <b:attr cond='not data:blog.analytics4' expr:value='data:blog.analyticsAccountNumber' name='data-analytics-uacct'/>
+  </ins>
+  <script>
+   (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</b:includable>
+      <b:includable id='emailPostIcon'>
+  <span class='byline post-icons'>
+    <!-- email post links -->
+    <span class='item-action'>
+      <a expr:href='data:post.emailPostUrl' expr:title='data:messages.emailPost'>
+        <b:include data='{ iconClass: &quot;touch-icon sharing-icon&quot; }' name='emailIcon'/>
+      </a>
+    </span>
+  </span>
+</b:includable>
+      <b:includable id='facebookShare'>
+  <b:with value='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;' var='onclick'>
+    <b:include name='platformShare'/>
+  </b:with>
+</b:includable>
+      <b:includable id='feedLinks'>
+  <b:if cond='!data:view.isPost'> <!-- Blog feed links -->
+    <b:if cond='data:feedLinks'>
+      <div class='blog-feeds'>
+        <b:include data='feedLinks' name='feedLinksBody'/>
+      </div>
+    </b:if>
+  <b:else/> <!--Post feed links -->
+    <div class='post-feeds'>
+      <b:loop values='data:posts' var='post'>
+        <b:if cond='data:post.allowComments and data:post.feedLinks'>
+          <b:include data='post.feedLinks' name='feedLinksBody'/>
+        </b:if>
+      </b:loop>
+    </div>
+  </b:if>
+</b:includable>
+      <b:includable id='feedLinksBody' var='links'>
+  <div class='feed-links'>
+  <data:messages.subscribeTo/>
+  <b:loop values='data:links' var='f'>
+     <a class='feed-link' expr:href='data:f.url' expr:type='data:f.mimeType' target='_blank'><data:f.name/> (<data:f.feedType/>)</a>
+  </b:loop>
+  </div>
+</b:includable>
+      <b:includable id='footerBylines'>
+  <b:if cond='data:widgets.Blog.first.footerBylines'>
+    <b:loop index='i' values='data:widgets.Blog.first.footerBylines' var='region'>
+      <b:if cond='not data:region.items.empty'>
+        <div expr:class='&quot;post-footer-line post-footer-line-&quot; + (data:i + 1)'>
+          <b:with value='&quot;footer-&quot; + (data:i + 1)' var='regionName'>
+            <b:include data='region.items' name='bylineRegion'/>
+          </b:with>
+        </div>
+      </b:if>
+    </b:loop>
+  </b:if>
+</b:includable>
+      <b:includable id='googlePlusShare'>
+</b:includable>
+      <b:includable id='headerByline'>
+  <b:if cond='data:widgets.Blog.first.headerByline'>
+    <div class='post-header'>
+      <div class='post-header-line-1'>
+        <b:with value='&quot;header-1&quot;' var='regionName'>
+          <b:include data='data:widgets.Blog.first.headerByline.items' name='bylineRegion'/>
+        </b:with>
+      </div>
+    </div>
+  </b:if>
+</b:includable>
+      <b:includable id='homePageLink'>
+  <a class='home-link' expr:href='data:blog.homepageUrl'>
+    <data:messages.home/>
+  </a>
+</b:includable>
+      <b:includable id='iframeComments' var='post'>
+  <!-- G+ comments, no longer available. The includable is retained for backwards-compatibility. -->
+</b:includable>
+      <b:includable id='inlineAd' var='post'>
+  <b:if cond='!data:view.isPreview'>
+    <b:if cond='data:this.adCode or data:this.adClientId or data:blog.adsenseClientId'>
+      <!-- Ad -->
+      <div class='inline-ad'>
+        <b:if cond='data:this.adCode != &quot;&quot;'>
+          <data:this.adCode/>
+        <b:else/>
+          <b:include cond='data:this.adClientId or data:blog.adsenseClientId' name='defaultAdUnit'/>
+        </b:if>
+      </div>
+    </b:if>
+  <b:else/>
+    <div class='inline-ad'>
+      <div class='inline-ad-placeholder'>
+        <span><b:message name='messages.adsGoHere'/></span>
+      </div>
+    </div>
+  </b:if>
+</b:includable>
+      <b:includable id='linkShare'>
+  <b:with value='&quot;window.prompt(\&quot;Copy to clipboard: Ctrl+C, Enter\&quot;, \&quot;&quot; + data:originalUrl + &quot;\&quot;); return false;&quot;' var='onclick'>
+    <b:include name='platformShare'/>
+  </b:with>
+</b:includable>
+      <b:includable id='nextPageLink'>
+  <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:messages.olderPosts'>
+    <data:messages.olderPosts/>
+  </a>
+</b:includable>
+      <b:includable id='otherSharingButton'>
+  <span class='sharing-platform-button sharing-element-other' expr:aria-label='data:messages.shareToOtherApps.escaped' expr:data-url='data:originalUrl' expr:title='data:messages.shareToOtherApps.escaped' role='menuitem' tabindex='-1'>
+    <b:with value='{key: &quot;sharingOther&quot;}' var='platform'>
+      <b:include name='sharingPlatformIcon'/>
+    </b:with>
+    <span class='platform-sharing-text'><data:messages.shareOtherApps.escaped/></span>
+  </span>
+</b:includable>
+      <b:includable id='platformShare'>
+  <a expr:class='&quot;goog-inline-block sharing-&quot; + data:platform.key' expr:data-url='data:originalUrl' expr:href='data:shareUrl + &quot;&amp;target=&quot; + data:platform.target' expr:onclick='data:onclick ? data:onclick : &quot;&quot;' expr:title='data:platform.shareMessage' target='_blank'>
+    <span class='share-button-link-text'>
+      <data:platform.shareMessage/>
+    </span>
+  </a>
+</b:includable>
+      <b:includable id='post' var='post'>
+  <div class='post'>
+    <b:include data='post' name='postMeta'/>
+    <b:include data='post' name='postTitle'/>
+    <b:include name='headerByline'/>
+    <b:if cond='data:view.isSingleItem'>
+      <b:include data='post' name='postBody'/>
+    <b:else/>
+      <b:include data='post' name='postBodySnippet'/>
+      <b:include data='post' name='postJumpLink'/>
+    </b:if>
+    <b:include data='post' name='postFooter'/>
+  </div>
+</b:includable>
+      <b:includable id='postAuthor'>
+  <span class='byline post-author vcard'>
+    <span class='post-author-label'>
+      <data:byline.label/>
+    </span>
+    <span class='fn'>
+      <b:if cond='data:post.author.profileUrl'>
+        <meta expr:content='data:post.author.profileUrl'/>
+        <a class='g-profile' expr:href='data:post.author.profileUrl' rel='author' title='author profile'>
+          <span><data:post.author.name/></span>
+        </a>
+      <b:else/>
+        <span><data:post.author.name/></span>
+      </b:if>
+    </span>
+  </span>
+</b:includable>
+      <b:includable id='postBody' var='post'>
+  <!-- If metaDescription is empty, use the post body as the schema.org description too, for G+/FB snippeting. -->
+  <div class='post-body entry-content float-container' expr:id='&quot;post-body-&quot; + data:post.id'>
+    <data:post.body/>
+  </div>
+</b:includable>
+      <b:includable id='postBodySnippet' var='post'>
+  <b:include data='post' name='postBody'/>
+</b:includable>
+      <b:includable id='postCommentsAndAd' var='post'>
+  <article class='post-outer-container'>
+    <!-- Post title and body -->
+    <div class='post-outer'>
+      <b:include data='post' name='post'/>
+    </div>
+
+    <!-- Comments -->
+    <b:include cond='data:view.isSingleItem' data='post' name='commentPicker'/>
+
+    <!-- Show ad inside post container, after comments, if single item. -->
+    <b:include cond='data:view.isSingleItem and data:post.includeAd' data='post' name='inlineAd'/>
+  </article>
+
+  <!-- Show ad outside post container (between posts) for feed pages. -->
+  <b:include cond='data:view.isMultipleItems and data:post.includeAd' data='post' name='inlineAd'/>
+</b:includable>
+      <b:includable id='postCommentsLink'>
+  <b:if cond='data:view.isMultipleItems'>
+    <span class='byline post-comment-link container'>
+      <b:include cond='data:post.commentSource != 1' name='commentsLink'/>
+    </span>
+  </b:if>
+</b:includable>
+      <b:includable id='postFooter' var='post'>
+  <div class='post-footer'>
+    <b:include name='footerBylines'/>
+    <b:include data='post' name='postFooterAuthorProfile'/>
+  </div>
+</b:includable>
+      <b:includable id='postFooterAuthorProfile' var='post'>
+  <b:if cond='data:post.author.aboutMe and data:view.isPost'>
+    <div class='author-profile'>
+      <b:if cond='data:post.author.authorPhoto.url'>
+        <img class='author-image' expr:src='data:post.author.authorPhoto.url' width='50px'/>
+        <div class='author-about'>
+          <b:include data='post' name='aboutPostAuthor'/>
+        </div>
+      <b:else/>
+        <b:include data='post' name='aboutPostAuthor'/>
+      </b:if>
+    </div>
+  </b:if>
+</b:includable>
+      <b:includable id='postHeader' var='post'>
+  <b:include name='headerByline'/>
+</b:includable>
+      <b:includable id='postJumpLink' var='post'>
+  <div class='jump-link flat-button'>
+    <a expr:href='data:post.url fragment &quot;more&quot;' expr:title='data:post.title'>
+      <b:eval expr='data:blog.jumpLinkMessage'/>
+    </a>
+  </div>
+</b:includable>
+      <b:includable id='postLabels'>
+  <span class='byline post-labels'>
+    <span class='byline-label'><data:byline.label/></span>
+    <b:loop index='i' values='data:post.labels' var='label'>
+      <a expr:href='data:label.url' rel='tag'>
+        <data:label.name/>
+      </a>
+    </b:loop>
+  </span>
+</b:includable>
+      <b:includable id='postLocation'>
+  <span class='byline post-location'>
+    <data:byline.label/>
+    <a expr:href='data:post.location.mapsUrl' target='_blank'><data:post.location.name/></a>
+  </span>
+</b:includable>
+      <b:includable id='postMeta' var='post'>
+  <b:include data='post' name='postMetadataJSON'/>
+</b:includable>
+      <b:includable id='postMetadataJSONImage'>
+  &quot;image&quot;: {
+    &quot;@type&quot;: &quot;ImageObject&quot;,
+    <b:if cond='data:post.featuredImage.isResizable'>
+    &quot;url&quot;: &quot;<b:eval expr='resizeImage(data:post.featuredImage, 1200, &quot;1200:630&quot;)'/>&quot;,
+    &quot;height&quot;: 630,
+    &quot;width&quot;: 1200
+    <b:else/>
+    &quot;url&quot;: &quot;https://blogger.googleusercontent.com/img/b/U2hvZWJveA/AVvXsEgfMvYAhAbdHksiBA24JKmb2Tav6K0GviwztID3Cq4VpV96HaJfy0viIu8z1SSw_G9n5FQHZWSRao61M3e58ImahqBtr7LiOUS6m_w59IvDYwjmMcbq3fKW4JSbacqkbxTo8B90dWp0Cese92xfLMPe_tg11g/w1200/&quot;,
+    &quot;height&quot;: 348,
+    &quot;width&quot;: 1200
+    </b:if>
+  },
+</b:includable>
+      <b:includable id='postMetadataJSONPublisher'>
+ &quot;publisher&quot;: {
+    &quot;@type&quot;: &quot;Organization&quot;,
+    &quot;name&quot;: &quot;Blogger&quot;,
+    &quot;logo&quot;: {
+      &quot;@type&quot;: &quot;ImageObject&quot;,
+      &quot;url&quot;: &quot;https://blogger.googleusercontent.com/img/b/U2hvZWJveA/AVvXsEgfMvYAhAbdHksiBA24JKmb2Tav6K0GviwztID3Cq4VpV96HaJfy0viIu8z1SSw_G9n5FQHZWSRao61M3e58ImahqBtr7LiOUS6m_w59IvDYwjmMcbq3fKW4JSbacqkbxTo8B90dWp0Cese92xfLMPe_tg11g/h60/&quot;,
+      &quot;width&quot;: 206,
+      &quot;height&quot;: 60
+    }
+  },
+</b:includable>
+      <b:includable id='postPagination'>
+  <div class='blog-pager container' id='blog-pager'>
+    <b:include cond='data:newerPageUrl' name='previousPageLink'/>
+    <b:include cond='data:olderPageUrl' name='nextPageLink'/>
+    <b:include cond='data:view.url != data:blog.homepageUrl' name='homePageLink'/>
+  </div>
+</b:includable>
+      <b:includable id='postReactions'>
+  <!-- Reaction feature no longer available. The includable is retained for backwards-compatibility. -->
+</b:includable>
+      <b:includable id='postShareButtons'>
+  <div class='byline post-share-buttons goog-inline-block'>
+    <b:with value='data:sharingId ?: ((data:widget.instanceId ?: &quot;sharing&quot;) + &quot;-&quot; + (data:regionName ?: &quot;byline&quot;) + &quot;-&quot; + data:post.id)' var='sharingId'>
+      <!-- Note: 'sharingButtons' includable is from the default Sharing widget markup. -->
+      <b:include data='{                                                sharingId: data:sharingId,                                                originalUrl: data:post.url,                                                platforms: data:this.sharing.platforms,                                                shareUrl: data:post.shareUrl,                                                shareTitle: data:post.title,                                              }' name='sharingButtons'/>
+    </b:with>
+  </div>
+</b:includable>
+      <b:includable id='postTimestamp'>
+  <span class='byline post-timestamp'>
+    <data:byline.label/>
+    <b:if cond='data:post.url'>
+      <meta expr:content='data:post.url.canonical'/>
+      <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'>
+        <time class='published' expr:datetime='data:post.date.iso8601' expr:title='data:post.date.iso8601'>
+          <data:post.date/>
+        </time>
+      </a>
+    </b:if>
+  </span>
+</b:includable>
+      <b:includable id='postTitle' var='post'>
+  <a expr:name='data:post.id'/>
+  <b:if cond='data:post.title != &quot;&quot;'>
+    <h3 class='post-title entry-title'>
+      <b:if cond='data:post.link or (data:post.url and data:view.url != data:post.url)'>
+        <a expr:href='data:post.link ?: data:post.url'><data:post.title/></a>
+      <b:else/>
+        <data:post.title/>
+      </b:if>
+    </h3>
+  </b:if>
+</b:includable>
+      <b:includable id='previousPageLink'>
+  <a class='blog-pager-newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:messages.newerPosts'>
+    <data:messages.newerPosts/>
+  </a>
+</b:includable>
+      <b:includable id='sharingButton'>
+  <span expr:aria-label='data:platform.shareMessage' expr:class='&quot;sharing-platform-button sharing-element-&quot; + data:platform.key' expr:data-href='data:shareUrl + &quot;&amp;target=&quot; + data:platform.target' expr:data-url='data:originalUrl' expr:title='data:platform.shareMessage' role='menuitem' tabindex='-1'>
+    <b:include name='sharingPlatformIcon'/>
+    <span class='platform-sharing-text'><data:platform.name/></span>
+  </span>
+</b:includable>
+      <b:includable id='sharingButtonContent'>
+  <div class='flat-icon-button ripple'>
+    <b:include name='shareIcon'/>
+  </div>
+</b:includable>
+      <b:includable id='sharingButtons'>
+  <div class='sharing' expr:aria-owns='&quot;sharing-popup-&quot; + data:sharingId' expr:data-title='data:shareTitle'>
+    <button class='sharing-button touch-icon-button' expr:aria-controls='&quot;sharing-popup-&quot; + data:sharingId' expr:aria-label='data:messages.share.escaped' expr:id='&quot;sharing-button-&quot; + data:sharingId' role='button'>
+      <b:include name='sharingButtonContent'/>
+    </button>
+    <b:include name='sharingButtonsMenu'/>
+  </div>
+</b:includable>
+      <b:includable id='sharingButtonsMenu'>
+  <div class='share-buttons-container'>
+    <ul aria-hidden='true' class='share-buttons hidden' expr:aria-label='data:messages.share.escaped' expr:id='&quot;sharing-popup-&quot; + data:sharingId' role='menu'>
+      <b:loop values='(data:platforms ?: data:blog.sharing.platforms) filter (p =&gt; p.key not in {&quot;blogThis&quot;})' var='platform'>
+        <li>
+          <b:include name='sharingButton'/>
+        </li>
+      </b:loop>
+      <li aria-hidden='true' class='hidden'>
+        <b:include name='otherSharingButton'/>
+      </li>
+    </ul>
+  </div>
+</b:includable>
+      <b:includable id='sharingPlatformIcon'>
+  <b:include data='{ iconClass: (&quot;touch-icon sharing-&quot; + data:platform.key) }' expr:name='data:platform.key + &quot;Icon&quot;'/>
+</b:includable>
+      <b:includable id='threadedCommentForm' var='post'>
+  <div class='comment-form'>
+    <a name='comment-form'/>
+    <h4 id='comment-post-message'><data:messages.postAComment/></h4>
+    <b:if cond='data:this.messages.blogComment != &quot;&quot;'>
+      <p><data:this.messages.blogComment/></p>
+    </b:if>
+    <b:include data='post' name='commentFormIframeSrc'/>
+    <iframe allowtransparency='allowtransparency' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight ?: &quot;90px&quot;' frameborder='0' id='comment-editor' name='comment-editor' src='' width='100%'/>
+    <data:post.cmtfpIframe/>
+    <script type='text/javascript'>
+      BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;);
+    </script>
+  </div>
+</b:includable>
+      <b:includable id='threadedCommentJs' var='post'>
+  <script async='async' expr:src='data:post.commentSrc' type='text/javascript'/>
+  <b:template-script inline='true' name='threaded_comments'/>
+  <script type='text/javascript'>
+    blogger.widgets.blog.initThreadedComments(
+        <data:post.commentJso/>,
+        <data:post.commentMsgs/>,
+        <data:post.commentConfig/>);
+  </script>
+</b:includable>
+      <b:includable id='threadedComments' var='post'>
+  <section class='comments threaded' expr:data-embed='data:post.embedCommentForm' expr:data-num-comments='data:post.numberOfComments' id='comments'>
+    <a name='comments'/>
+
+    <b:include name='commentsTitle'/>
+
+    <div class='comments-content'>
+      <b:if cond='data:post.embedCommentForm'>
+        <b:include data='post' name='threadedCommentJs'/>
+      </b:if>
+      <div id='comment-holder'>
+         <data:post.commentHtml/>
+      </div>
+    </div>
+
+    <p class='comment-footer'>
+      <b:if cond='data:post.allowNewComments'>
+        <b:include data='post' name='threadedCommentForm'/>
+      <b:else/>
+        <data:post.noNewCommentsText/>
+      </b:if>
+      <b:if cond='data:post.showManageComments'>
+        <b:include data='post' name='manageComments'/>
+      </b:if>
+    </p>
+
+    <b:if cond='data:showCmtPopup'>
+      <div id='comment-popup'>
+        <iframe allowtransparency='allowtransparency' frameborder='0' id='comment-actions' name='comment-actions' scrolling='no'>
+        </iframe>
+      </div>
+    </b:if>
+  </section>
+</b:includable>
+      <b:includable id='tooltipCss'>
+  <!-- LINT.IfChange -->
+  <style>
+    .post-body a.b-tooltip-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .post-body a.b-tooltip-container .b-tooltip {
+      display: block !important;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-20%, 1px);
+      visibility: hidden;
+      opacity: 0;
+      z-index: 1;
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    .post-body a.b-tooltip-container .b-tooltip iframe {
+      width: 200px;
+      height: 198px;
+      max-width: none;
+      border: none;
+      border-radius: 20px;
+      box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (hover: hover) {
+      .post-body a.b-tooltip-container:hover .b-tooltip {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  </style>
+  <!-- LINT.ThenChange(//depot/google3/java/com/google/blogger/b2/layouts/widgets/v2-style.css) -->
+</b:includable>
+    </b:widget>
+  </b:section>
+
+<script>
+function orderWhatsApp(label) {
+  const message = encodeURIComponent(&quot;مرحبا&#1548; أريد طلب بطاقة eSIM: &quot; + (label || &quot;باقات eSIM&quot;));
+  window.open(&quot;https://wa.me/212760767265?text=&quot; + message, &quot;_blank&quot;);
+}
+function contactWhatsApp(destination) {
+  orderWhatsApp(destination || &quot;باقة eSIM&quot;);
+}
+function openArabPackageModal(packageId) {
+  orderWhatsApp(packageId || &quot;باقة eSIM للدول العربية&quot;);
+}
+function openPurchaseModal(destId) {
+  try {
+    if (typeof destinations !== &quot;undefined&quot;) {
+      const d = destinations.find(x =&gt; x.id === destId);
+      orderWhatsApp(d ? d.country + &quot; - &quot; + d.data + &quot; - &quot; + d.days : &quot;باقة eSIM&quot;);
+    } else {
+      orderWhatsApp(&quot;باقة eSIM&quot;);
+    }
+  } catch(e) {
+    orderWhatsApp(&quot;باقة eSIM&quot;);
+  }
+}
+</script>
+
+</body>
+</html>
